@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Účinkujícího - ZVUKY ÚDOLÍ 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --primary-color: #1a1a2e;
+            --accent-color: #ff006e;
+            --secondary-color: #00d9ff;
+            --text-color: #e0e0e0;
+            --bg-dark: #0f0f1e;
+            --bg-light: #16213e;
+            --border-color: #ff006e;
+        }
+
+        .performer-detail-container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: var(--bg-light);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+        }
+        .performer-detail-header {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        .performer-detail-header img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+        .performer-detail-info {
+            flex: 1;
+        }
+        .performer-detail-info h2 {
+            margin-top: 0;
+            font-size: 2.5rem;
+            color: #ffffff;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+        }
+        .performer-detail-info p {
+            line-height: 1.6;
+            font-size: 1.1rem;
+            color: var(--text-color);
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            text-decoration: none;
+            border: 1px solid var(--secondary-color);
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+        .back-link:hover {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+        }
+        .info-row {
+            display: flex;
+            margin: 1rem 0;
+            gap: 1rem;
+            color: var(--text-color);
+        }
+        .info-label {
+            font-weight: bold;
+            min-width: 100px;
+            color: var(--secondary-color);
+        }
+        .detail-bio {
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 1.5rem;
+            border-radius: 4px;
+            border-left: 3px solid var(--secondary-color);
+        }
+        .detail-bio h3 {
+            color: #ffffff;
+        }
+        .detail-bio p {
+            color: var(--text-color);
+        }
+        @media (max-width: 768px) {
+            .performer-detail-header {
+                flex-direction: column;
+            }
+            .performer-detail-header img {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>ZVUKY ÚDOLÍ</h1>
+            <ul>
+                <li><a href="index.html">Úvod</a></li>
+                <li><a href="program.html">Program</a></li>
+                <li><a href="performers.html">Účinkující</a></li>
+                <li><a href="practical-info.html">Praktické Info</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="detail-container">
+        <div class="performer-detail-container" id="performerDetail">
+            <p style="text-align: center; font-size: 1.2rem;">Načítání...</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ZVUKY ÚDOLÍ Festival. Všechna práva vyhrazena. | <a href="#privacy">Zásady ochrany soukromí</a> | <a href="#terms">Podmínky a poskytování služeb</a></p>
+    </footer>
+
+    <script>
+        // Performer data
+        const performersData = {
+            'kobalt-collective': {
+                name: 'Kobalt Collective',
+                genre: 'Techno',
+                country: 'Německo',
+                city: 'Berlín',
+                image: 'https://picsum.photos/300/300?random=5',
+                description: 'Berlínská techno formace známá minimalistickými a hypnotickými sety. Čerpají inspiraci z industriálního zvuku.',
+                bio: 'Kobalt Collective je jednou z nejvýznamnějších techno skupin ze Berlína. Od roku 2010 vydali tři studiová alba a vystupovali na nejprestižnějších festivalech v Evropě. Jejich zvuk je charakterizován chladným průmyslovým timbrem a hipnotickými rytmickými strukturami.',
+                website: 'https://www.example.com',
+                socialMedia: '@kobaltcollective'
+            },
+            'luna-waves': {
+                name: 'Luna Waves',
+                genre: 'Ambient Electronic',
+                country: 'Belgie',
+                city: 'Brusel',
+                image: 'https://picsum.photos/300/300?random=6',
+                description: 'Belgická producentka a DJ se zaměřením na ambient a experimentální elektroniku. Tvorba s fokusem na textury zvuku.',
+                bio: 'Luna Waves je uznávaná belgická elektronická producentka zaměřená na tvorbu atmosférické a texturované hudby. Její práce byly vydány u prestižních labelu a její live sety jsou známé svou hypnotickou kvalitou a emotivním dopadem.',
+                website: 'https://www.example.com',
+                socialMedia: '@lunawaves'
+            },
+            'sonic-drift': {
+                name: 'Sonic Drift',
+                genre: 'House',
+                country: 'Nizozemí',
+                city: 'Amsterdam',
+                image: 'https://picsum.photos/300/300?random=7',
+                description: 'Holandský DJ a producent slavný svými energetickými house sety. 20 let zkušeností v klubech po celé Evropě.',
+                bio: 'Sonic Drift je veteran holandské house scény s více než dvacetiletou kariérou. Zápis se všemi největšími kluby v Evropě a vytvořil nespočet remixů. Jeho sety jsou oslavou klasické house hudby s moderními prvky.',
+                website: 'https://www.example.com',
+                socialMedia: '@sonicdrift'
+            },
+            'metamorphosis': {
+                name: 'Metamorphosis',
+                genre: 'Progressive Electronic',
+                country: 'Česká Republika',
+                city: 'Praha',
+                image: 'https://picsum.photos/300/300?random=8',
+                description: 'Týmová performance kombinující produkci elektronické hudby s live vizuály a interaktivními prvky.',
+                bio: 'Metamorphosis je kolaborativní projekt čtyř českých umělců, kteří spojují produkci elektronické hudby s živými vizuálními projekcemi a interaktivními prvky. Jejich live sety jsou komplexním zážitkem pro všechny smysly.',
+                website: 'https://www.example.com',
+                socialMedia: '@metamorphosis_cz'
+            },
+            'apex-rhythms': {
+                name: 'Apex Rhythms',
+                genre: 'Techno',
+                country: 'Francie',
+                city: 'Paříž',
+                image: 'https://picsum.photos/300/300?random=9',
+                description: 'Francouzský techno umělec s fokusem na hardcore a experimentální zvuky. Vytvořil 8 alb za poslední dekádu.',
+                bio: 'Apex Rhythms je francouzský techno producent a DJ známý svou experimentální a avant-garde přístupem. Vydal 8 studiových alb a pravidelně koncertuje na mezinárodních festivalech. Jeho hudba posouvá hranice elektronické hudby.',
+                website: 'https://www.example.com',
+                socialMedia: '@apexrhythms'
+            },
+            'the-velvet-echoes': {
+                name: 'The Velvet Echoes',
+                genre: 'Indie Rock',
+                country: 'Česká Republika',
+                city: 'Praha',
+                image: 'https://picsum.photos/300/300?random=10',
+                description: 'Čtyřčlenná indie rock kapela z Prahy. Jejich melancholické skladby s introspektivními texty získaly fanoušky po celé Evropě.',
+                bio: 'The Velvet Echoes jsou čtyřčlenná indie rock kapela z Prahy, která vstoupila na scénu v roce 2015. Jejich hudba kombinuje velvetový zvuk s hlubokými introspektivními texty. Vydali tři alba a jejich skladby byly streámovány miliony krát.',
+                website: 'https://www.example.com',
+                socialMedia: '@velvetechoes'
+            },
+            'crimson-whisper': {
+                name: 'Crimson Whisper',
+                genre: 'Post-Punk Revival',
+                country: 'Velká Británie',
+                city: 'Londýn',
+                image: 'https://picsum.photos/300/300?random=11',
+                description: 'Britská post-punk kapela s energetickými live show. Jejich temnější zvuk čerpá z 80. let.',
+                bio: 'Crimson Whisper je britská post-punk revivalová kapela z Londýna. Jejich hudba čerpá inspiraci z osmdesátých let a temných atmosfér. Známí jsou svými intenzivními a emocionálními live výkony.',
+                website: 'https://www.example.com',
+                socialMedia: '@crimsonwhisper'
+            },
+            'spark-quintet': {
+                name: 'Spark Quintet',
+                genre: 'Modern Jazz',
+                country: 'Česká Republika',
+                city: 'Praha',
+                image: 'https://picsum.photos/300/300?random=12',
+                description: 'Pražský jazzový kvintet zaměřený na improvizaci a experimentaci. Jejich fusion mixuje jazz s prvky elektroniky.',
+                bio: 'Spark Quintet je pražský jazzový kvintet zaměřený na moderní jazz a fusion. Jejich hudba kombinuje tradici jazzové improvizace s prvky elektronické hudby a experimentálního zvuku. Pravidelně koncertují v evropských jazzových klubech.',
+                website: 'https://www.example.com',
+                socialMedia: '@sparkquintet'
+            }
+        };
+
+        // Get performer from URL parameter
+        function getPerformerFromUrl() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('performer');
+        }
+
+        // Render performer detail
+        function renderPerformerDetail() {
+            const performerId = getPerformerFromUrl();
+            const performer = performersData[performerId];
+
+            if (!performer) {
+                document.getElementById('performerDetail').innerHTML = `
+                    <p style="text-align: center; font-size: 1.2rem; color: var(--text-color);">
+                        Účinkující nenalezen. <a href="performers.html">Zpět na seznam</a>
+                    </p>
+                `;
+                return;
+            }
+
+            const html = `
+                <div class="performer-detail-header">
+                    <img src="${performer.image}" alt="${performer.name}">
+                    <div class="performer-detail-info">
+                        <h2>${performer.name}</h2>
+                        <div class="info-row">
+                            <span class="info-label">Žánr:</span>
+                            <span>${performer.genre}</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Země:</span>
+                            <span>${performer.country}</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Město:</span>
+                            <span>${performer.city}</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Web:</span>
+                            <span><a href="${performer.website}" target="_blank">${performer.website}</a></span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Sociální sítě:</span>
+                            <span>${performer.socialMedia}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="detail-bio">
+                    <h3>O účinkujícím</h3>
+                    <p>${performer.bio}</p>
+                    <a href="performers.html" class="back-link">← Zpět na seznam účinkujících</a>
+                </div>
+            `;
+
+            document.getElementById('performerDetail').innerHTML = html;
+        }
+
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', renderPerformerDetail);
+    </script>
+</body>
+</html>
