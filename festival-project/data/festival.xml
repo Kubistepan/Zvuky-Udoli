@@ -1,0 +1,1188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<festival>
+  <metadata>
+    <name>ZVUKY ÚDOLÍ</name>
+    <year>2026</year>
+    <edition>1</edition>
+    <location>Údolí nad Zdobnicí, Česká Republika</location>
+    <startDate>2026-06-19</startDate>
+    <endDate>2026-06-21</endDate>
+    <description>Multižánrový hudební festival zaměřený na elektronickou hudbu, indie rock a experimentální zvuk.</description>
+    <website>https://zvukydoli.cz</website>
+    <email>info@zvukydoli.cz</email>
+    <phoneNumber>+420 731 234 567</phoneNumber>
+  </metadata>
+
+  <venues>
+    <venue id="v1">
+      <name>Hlavní Areál</name>
+      <description>Venkovní prostor s dvěma hlavními scénami</description>
+      <address>Údolská Nádraží 45, 789 01 Údolí nad Zdobnicí</address>
+      <capacity>5000</capacity>
+      <stages>
+        <stage id="s1">
+          <name>Primární Scéna</name>
+          <capacity>3000</capacity>
+          <type>outdoor</type>
+        </stage>
+        <stage id="s2">
+          <name>Sekundární Scéna</name>
+          <capacity>2000</capacity>
+          <type>outdoor</type>
+        </stage>
+      </stages>
+    </venue>
+    <venue id="v2">
+      <name>Kulturní Pavilon</name>
+      <description>Krytý prostor pro klubové a experimentální vystoupení</description>
+      <address>Údolská 12, 789 01 Údolí nad Zdobnicí</address>
+      <capacity>800</capacity>
+      <stages>
+        <stage id="s3">
+          <name>Pavilon Stage</name>
+          <capacity>800</capacity>
+          <type>indoor</type>
+        </stage>
+      </stages>
+    </venue>
+  </venues>
+
+  <performers>
+    <!-- Electronic & Techno -->
+    <performer id="p1">
+      <name>Kobalt Collective</name>
+      <genre>Techno</genre>
+      <bio>Berlínská techno formace známá minimalistickými a hypnotickými sety. Čerpají inspiraci z industriálního zvuku.</bio>
+      <country>Německo</country>
+      <image>https://via.placeholder.com/300?text=Kobalt</image>
+    </performer>
+    <performer id="p2">
+      <name>Luna Waves</name>
+      <genre>Ambient Electronic</genre>
+      <bio>Belgická producentka a DJ se zaměřením na ambient a experimentální elektroniku. Tvorba s fokusem na textury zvuku.</bio>
+      <country>Belgie</country>
+      <image>https://via.placeholder.com/300?text=Luna</image>
+    </performer>
+    <performer id="p3">
+      <name>Sonic Drift</name>
+      <genre>House</genre>
+      <bio>Holandský DJ a producent slavný svými energetickými house sety. 20 let zkušeností v klubech po celé Evropě.</bio>
+      <country>Nizozemí</country>
+      <image>https://via.placeholder.com/300?text=Sonic</image>
+    </performer>
+    <performer id="p4">
+      <name>Metamorphosis</name>
+      <genre>Progressive Electronic</genre>
+      <bio>Týmová performance kombinující produkci elektronické hudby s live vizuály a interaktivními prvky.</bio>
+      <country>Česká Republika</country>
+      <image>https://via.placeholder.com/300?text=Metamorphosis</image>
+    </performer>
+    <performer id="p5">
+      <name>Apex Rhythms</name>
+      <genre>Techno</genre>
+      <bio>Francouzský techno umělec s fokusem na hardcore a experimentální zvuky. Vytvořil 8 alb za poslední dekádu.</bio>
+      <country>Francie</country>
+      <image>https://via.placeholder.com/300?text=Apex</image>
+    </performer>
+    <performer id="p6">
+      <name>Echo Realm</name>
+      <genre>Ambient</genre>
+      <bio>Experimentální hudebník z Švédska zaměřený na vytváření atmosferických soundscapů. Spolupracuje s filmovými tvůrci.</bio>
+      <country>Švédsko</country>
+      <image>https://via.placeholder.com/300?text=Echo</image>
+    </performer>
+    <performer id="p7">
+      <name>Circuit Breaker</name>
+      <genre>Industrial Electronic</genre>
+      <bio>Britský producent známý agresivním, experimentálním zpracováním elektroniky. Používá nespojité syntezátory a šumové efekty.</bio>
+      <country>Velká Británie</country>
+      <image>https://via.placeholder.com/300?text=Circuit</image>
+    </performer>
+    <performer id="p8">
+      <name>Subwoofer Dreams</name>
+      <genre>Deep House</genre>
+      <bio>Dnešní DJ s australským původem; známá svými chladnými house sety s hlubokými basovými liniemi.</bio>
+      <country>Austrálie</country>
+      <image>https://via.placeholder.com/300?text=Subwoofer</image>
+    </performer>
+    <performer id="p9">
+      <name>Pixel Shaper</name>
+      <genre>IDM</genre>
+      <bio>České producenty zaměřené na intelligent dance music s komplexními rytmickými strukturami.</bio>
+      <country>Česká Republika</country>
+      <image>https://via.placeholder.com/300?text=Pixel</image>
+    </performer>
+    <performer id="p10">
+      <name>Neon Vortex</name>
+      <genre>Synthwave</genre>
+      <bio>Polský synth-pop projekt s retro-futuristickým zvukem. Kombinuje klasické synth prvky s moderní produkcí.</bio>
+      <country>Polsko</country>
+      <image>https://via.placeholder.com/300?text=Neon</image>
+    </performer>
+
+    <!-- Indie & Alternative Rock -->
+    <performer id="p11">
+      <name>The Velvet Echoes</name>
+      <genre>Indie Rock</genre>
+      <bio>Čtyřčlenná indie rock kapela z Prahy. Jejich melancholické skladby s introspektivními texty získaly fanoušky po celé Evropě.</bio>
+      <country>Česká Republika</country>
+      <image>https://via.placeholder.com/300?text=VelvetEchoes</image>
+    </performer>
+    <performer id="p12">
+      <name>Crimson Whisper</name>
+      <genre>Post-Punk Revival</genre>
+      <bio>Britská post-punk kapela s energetickými live show. Jejich temnější zvuk čerpá z 80. let, ale zůstává překvapivě aktuální.</bio>
+      <country>Velká Británie</country>
+      <image>https://via.placeholder.com/300?text=Crimson</image>
+    </performer>
+    <performer id="p13">
+      <name>Aurora Band</name>
+      <genre>Alternative</genre>
+      <bio>Německá kapela kombinující indie rock, psychedelic a experimentální prvky. Živé show bez sady skladeb — vždy nové.</bio>
+      <country>Německo</country>
+      <image>https://via.placeholder.com/300?text=Aurora</image>
+    </performer>
+    <performer id="p14">
+      <name>Midnight Cascade</name>
+      <genre>Dream Pop</genre>
+      <bio>Belgická dream pop kapela s klidnějším, efektivním zvukem. Jejich skladby jsou zaměřeny na melodické linie a emočnost.</bio>
+      <country>Belgie</country>
+      <image>https://via.placeholder.com/300?text=Midnight</image>
+    </performer>
+    <performer id="p15">
+      <name>Stone Rebels</name>
+      <genre>Garage Rock</genre>
+      <bio>Španělská garage rock kapela s surovým, energetickým zdobením. Syrové kytarové linie a hlasitý zvuk jsou jejich signaturou.</bio>
+      <country>Španělsko</country>
+      <image>https://via.placeholder.com/300?text=Stone</image>
+    </performer>
+    <performer id="p16">
+      <name>The Nomads</name>
+      <genre>Indie Folk</genre>
+      <bio>Rakouská skupina zaměřená na fusion indie folku s elektronickými prvky. Jejich hudba je introspektivní a přírodě inspirovaná.</bio>
+      <country>Rakousko</country>
+      <image>https://via.placeholder.com/300?text=Nomads</image>
+    </performer>
+    <performer id="p17">
+      <name>Obsidian Echo</name>
+      <genre>Alternative Rock</genre>
+      <bio>Švédská kapela s angažovanými texty a progresivní hudební strukturou. Jejich koncerty jsou intenzivní a emocionální.</bio>
+      <country>Švédsko</country>
+      <image>https://via.placeholder.com/300?text=Obsidian</image>
+    </performer>
+    <performer id="p18">
+      <name>Luminous</name>
+      <genre>Indie Pop</genre>
+      <bio>Italská kapela s pozitivní energií a omalovými harmonií. Jejich skladby jsou ideální na letní festivaly.</bio>
+      <country>Itálie</country>
+      <image>https://via.placeholder.com/300?text=Luminous</image>
+    </performer>
+
+    <!-- Jazz & Improvisace -->
+    <performer id="p19">
+      <name>Spark Quintet</name>
+      <genre>Modern Jazz</genre>
+      <bio>Pražský jazzový kvintet zaměřený na improvizaci a experimentaci. Jejich fusion mixuje jazz s prvky elektroniky.</bio>
+      <country>Česká Republika</country>
+      <image>https://via.placeholder.com/300?text=Spark</image>
+    </performer>
+    <performer id="p20">
+      <name>Freejazz Collective</name>
+      <genre>Free Jazz</genre>
+      <bio>Finská improvizační skupina bez předem daného schématu. Jejich performances jsou nepředvídatelné a vždy jedinečné.</bio>
+      <country>Finsko</country>
+      <image>https://via.placeholder.com/300?text=Freejazz</image>
+    </performer>
+
+    <!-- Experimental & Performance -->
+    <performer id="p21">
+      <name>Sonic Sculpture</name>
+      <genre>Sound Art</genre>
+      <bio>Vícemédiální umělec zaměřený na zvukové instalace a performance art. Jejich práce zkoumá vztah zvuku a prostoru.</bio>
+      <country>Česká Republika</country>
+      <image>https://via.placeholder.com/300?text=SonicSculpt</image>
+    </performer>
+    <performer id="p22">
+      <name>Visual Pulse</name>
+      <genre>Audio-Visual Performance</genre>
+      <bio>Kolaborace mezi hudbě tvůrcem a vizuálním umělcem. Jejich show kombinují hudbu s živými video projekcemi a světly.</bio>
+      <country>Německo</country>
+      <image>https://via.placeholder.com/300?text=VisualPulse</image>
+    </performer>
+
+    <!-- DJ Collective & Producers -->
+    <performer id="p23">
+      <name>DJ Catalyst</name>
+      <genre>House / Techno</genre>
+      <bio>Zkušený DJ z Amsterdamu se specialistou na mixing více žánrů. Jejich sety jsou vždy dynamické a emotivní.</bio>
+      <country>Nizozemí</country>
+      <image>https://via.placeholder.com/300?text=Catalyst</image>
+    </performer>
+    <performer id="p24">
+      <name>Pulse Collective</name>
+      <genre>Minimal Techno</genre>
+      <bio>Tříčlenný DJ kolektiv z Polska se zaměřením na minimální techniku. Jejich skupinové sety vytváří dlouhodobé танцy journey.</bio>
+      <country>Polsko</country>
+      <image>https://via.placeholder.com/300?text=Pulse</image>
+    </performer>
+    <performer id="p25">
+      <name>Frequency Master</name>
+      <genre>Electronic</genre>
+      <bio>Osobnost českých klubových scén. DJ a producent se specializacím v progresivní elektronice.</bio>
+      <country>Česká Republika</country>
+      <image>https://via.placeholder.com/300?text=Frequency</image>
+    </performer>
+    <performer id="p26">
+      <name>Raven Sessions</name>
+      <genre>Drum and Bass</genre>
+      <bio>Britský DJ se záměrem na rychlé a energetické drum and bass sety. Jeho mixing je precizní a technicky vyspělý.</bio>
+      <country>Velká Británie</country>
+      <image>https://via.placeholder.com/300?text=Raven</image>
+    </performer>
+    <performer id="p27">
+      <name>Cascade Sounds</name>
+      <genre>Jungle</genre>
+      <bio>Belgický DJ se specialistou na jungle a dnb. Jejich historické pohled kombinuje klasické jungle s moderními prvky.</bio>
+      <country>Belgie</country>
+      <image>https://via.placeholder.com/300?text=Cascade</image>
+    </performer>
+    <performer id="p28">
+      <name>Midnight DJ Crew</name>
+      <genre>House</genre>
+      <bio>Čtyřčlenný DJ crew z Maďarska se zaměřením na nocturní house. Jejich sety jsou ideální na pozdní noční hodiny.</bio>
+      <country>Maďarsko</country>
+      <image>https://via.placeholder.com/300?text=MidnightDJ</image>
+    </performer>
+    <performer id="p29">
+      <name>Echo Decays</name>
+      <genre>Techno</genre>
+      <bio>Rumunský DJ a producent se zaměřením na industriální techno. Intenzivní a agresivní zvuk vytváří jedinečnou atmosféru.</bio>
+      <country>Rumunsko</country>
+      <image>https://via.placeholder.com/300?text=EchoDecays</image>
+    </performer>
+    <performer id="p30">
+      <name>Solar Rhythms</name>
+      <genre>Afrobeat / Electronic</genre>
+      <bio>DJ z Káhiry se fusionuje afrobeat s elektronickou hudbou. Jejich sety přináší neobvyklou kombinaci tradice a modernosti.</bio>
+      <country>Egypta</country>
+      <image>https://via.placeholder.com/300?text=Solar</image>
+    </performer>
+
+    <!-- Additional Performers (30+ more) -->
+    <performer id="p31">
+      <name>The Metalheads</name>
+      <genre>Psychedelic Rock</genre>
+      <bio>Britská rock kapela se psychedálními vlivy. Jejich zvukový spektrum se rozprostírá od blues rockových riffů po kosmické synthesizéry.</bio>
+      <country>Velká Británie</country>
+      <image>https://via.placeholder.com/300?text=Metalheads</image>
+    </performer>
+    <performer id="p32">
+      <name>Ethereal Echo</name>
+      <genre>Synthpop</genre>
+      <bio>Norská synthpop kapela s retro inspirací a moderní produkcí. Jejich skladby jsou catchy a energetické.</bio>
+      <country>Norsko</country>
+      <image>https://via.placeholder.com/300?text=Ethereal</image>
+    </performer>
+    <performer id="p33">
+      <name>Void Wanders</name>
+      <genre>Experimental Rock</genre>
+      <bio>Česká experimentální kapela bez omezení žánrových hranic. Jejich hudba je obtížně kategorizovatelná, ale fascinující.</bio>
+      <country>Česká Republika</country>
+      <image>https://via.placeholder.com/300?text=Void</image>
+    </performer>
+    <performer id="p34">
+      <name>Icebreaker</name>
+      <genre>Indie Rock</genre>
+      <bio>Skandinávská kapela se zimním, chladným zvukem. Jejich minimalistický approach vytváří silný dopad.</bio>
+      <country>Švédsko</country>
+      <image>https://via.placeholder.com/300?text=Icebreaker</image>
+    </performer>
+    <performer id="p35">
+      <name>Phantom Crew</name>
+      <genre>Hip-Hop / Electronic</genre>
+      <bio>Pražská hip-hopová skupina se elektronickým backingem. Jejich texty jsou socially aware a jejich zvuk je inovativní.</bio>
+      <country>Česká Republika</country>
+      <image>https://via.placeholder.com/300?text=Phantom</image>
+    </performer>
+    <performer id="p36">
+      <name>Crystal Waves</name>
+      <genre>Progressive House</genre>
+      <bio>Vídeňský DJ se zaměřením na progresivní house. Jejich sety jsou dlouhé, hypnotické journey přes různé zvukové textury.</bio>
+      <country>Rakousko</country>
+      <image>https://via.placeholder.com/300?text=Crystal</image>
+    </performer>
+    <performer id="p37">
+      <name>Neon Syndicate</name>
+      <genre>Synthwave / Darkwave</genre>
+      <bio>Polská synthwave kapela se temným, atmosférickým zvukem. Jejich estetika je čistě 80s retro bezčasová.</bio>
+      <country>Polsko</country>
+      <image>https://via.placeholder.com/300?text=NeonSyndicate</image>
+    </performer>
+    <performer id="p38">
+      <name>Dust Collectors</name>
+      <genre>Folk / Electronic</genre>
+      <bio>Slovenská skupina zaměřená na fusion tradičního folku s moderními elektronickými prvky.</bio>
+      <country>Slovensko</country>
+      <image>https://via.placeholder.com/300?text=Dust</image>
+    </performer>
+    <performer id="p39">
+      <name>Krystal Struktura</name>
+      <genre>Glitch / Noise</genre>
+      <bio>Experimentální projekt z Brna s fokusem na glitch hudbu a zvukový noise. Jejich live performances jsou senzoricky intenzivní.</bio>
+      <country>Česká Republika</country>
+      <image>https://via.placeholder.com/300?text=Krystal</image>
+    </performer>
+    <performer id="p40">
+      <name>The Void Sessions</name>
+      <genre>Dark Ambient</genre>
+      <bio>Atmosférické dark ambient duo z Německa. Jejich hudba je ideální pro pozdní noční koncerty.</bio>
+      <country>Německo</country>
+      <image>https://via.placeholder.com/300?text=Void</image>
+    </performer>
+    <performer id="p41">
+      <name>Ultraviolet</name>
+      <genre>Electropop</genre>
+      <bio>Francouzská pop banda s elektronickým edgem. Jejich skladby jsou skladné, tanečné a radostné.</bio>
+      <country>Francie</country>
+      <image>https://via.placeholder.com/300?text=Ultraviolet</image>
+    </performer>
+    <performer id="p42">
+      <name>Ground Control</name>
+      <genre>Space Ambient</genre>
+      <bio>Německý producent se zaměřením na kosmickou a vesmírnou ambient hudbu. Jejich sountrack jsou ideální k meditaci nebo spanku.</bio>
+      <country>Německo</country>
+      <image>https://via.placeholder.com/300?text=GroundControl</image>
+    </performer>
+    <performer id="p43">
+      <name>Polaris</name>
+      <genre>Digital Folk</genre>
+      <bio>Islandská umělkyně kombinující tradiční islandský folk s digitálními nástroji.</bio>
+      <country>Island</country>
+      <image>https://via.placeholder.com/300?text=Polaris</image>
+    </performer>
+    <performer id="p44">
+      <name>Binary Saints</name>
+      <genre>Retrowave</genre>
+      <bio>Americký (Miami-based) synthwave projekt s neonové estetiky. Jejich zvuk je klasicky 80s, ale energečně moderní.</bio>
+      <country>USA</country>
+      <image>https://via.placeholder.com/300?text=Binary</image>
+    </performer>
+    <performer id="p45">
+      <name>Acoustic Wires</name>
+      <genre>Acoustic Electronic</genre>
+      <bio>Česká duo kombinující akustické nástroje s elektronickými efekty. Jejich přístup je hybridy a překvapivě harmonický.</bio>
+      <country>Česká Republika</country>
+      <image>https://via.placeholder.com/300?text=Acoustic</image>
+    </performer>
+    <performer id="p46">
+      <name>Velocity Pulse</name>
+      <genre>Trance</genre>
+      <bio>Holandský DJ a producent se zaměřením na progresivní trance. Jejich sety jsou dynamické s postupně rostoucím napětím.</bio>
+      <country>Nizozemí</country>
+      <image>https://via.placeholder.com/300?text=Velocity</image>
+    </performer>
+    <performer id="p47">
+      <name>Shadow Play</name>
+      <genre>Art Rock</genre>
+      <bio>Belgická art rock kapela s komplexními aranžmá. Jejich koncerty jsou jako divadelní představení.</bio>
+      <country>Belgie</country>
+      <image>https://via.placeholder.com/300?text=ShadowPlay</image>
+    </performer>
+    <performer id="p48">
+      <name>Cyborg Dreams</name>
+      <genre>Futuristic Electronic</genre>
+      <bio>Švédský producent zaměřený na futuristické a sci-fi zvuky. Jeho hudba zní jako hudba ze vzdálené budoucnosti.</bio>
+      <country>Švédsko</country>
+      <image>https://via.placeholder.com/300?text=Cyborg</image>
+    </performer>
+    <performer id="p49">
+      <name>The Echo Gardens</name>
+      <genre>Indie Electronic</genre>
+      <bio>Polská indie electronic kapela s lyrištkou kvalitou. Jejich hudba je citlivá a esteticky zajímavá.</bio>
+      <country>Polsko</country>
+      <image>https://via.placeholder.com/300?text=EchoGardens</image>
+    </performer>
+    <performer id="p50">
+      <name>Gravity Well</name>
+      <genre>Post-Rock</genre>
+      <bio>Německá post-rockObická kapela bez vokálů. Jejich hudba je instrumentálně bohatá a emočně intenzivní.</bio>
+      <country>Německo</country>
+      <image>https://via.placeholder.com/300?text=Gravity</image>
+    </performer>
+
+    <!-- Additional 10+ performers -->
+    <performer id="p51">
+      <name>Neon Birds</name>
+      <genre>Synthwave</genre>
+      <bio>Serbský synthwave projekt s retro flair a moderní produkcí.</bio>
+      <country>Srbsko</country>
+      <image>https://via.placeholder.com/300?text=NeonBirds</image>
+    </performer>
+    <performer id="p52">
+      <name>Quantum Flux</name>
+      <genre>IDM</genre>
+      <bio>Česká IDM (Intelligent Dance Music) kapela s komplexními polyrhytmy.</bio>
+      <country>Česká Republika</country>
+      <image>https://via.placeholder.com/300?text=Quantum</image>
+    </performer>
+    <performer id="p53">
+      <name>Velvet Underground Tribute</name>
+      <genre>Experimental Rock</genre>
+      <bio>Vídeňská kapela věnovaná odkazu Velvet Underground s vlastním twist.</bio>
+      <country>Rakousko</country>
+      <image>https://via.placeholder.com/300?text=Velvet</image>
+    </performer>
+    <performer id="p54">
+      <name>Chromatic Dreams</name>
+      <genre>Synthpop</genre>
+      <bio>Švýcarská synthpop duo s minimalistickým přístupem a maximálním dopadem.</bio>
+      <country>Švýcarsko</country>
+      <image>https://via.placeholder.com/300?text=Chromatic</image>
+    </performer>
+    <performer id="p55">
+      <name>Liquid Shadows</name>
+      <genre>Liquid Funk</genre>
+      <bio>Britský DJ zaměřený na liquid funk a smooth breakbeats.</bio>
+      <country>Velká Británie</country>
+      <image>https://via.placeholder.com/300?text=Liquid</image>
+    </performer>
+    <performer id="p56">
+      <name>Noctis</name>
+      <genre>Darksynth</genre>
+      <bio>Italský darksynth projekt s gotickými vlivy. Jejich zvuk je temný a atmosferický.</bio>
+      <country>Itálie</country>
+      <image>https://via.placeholder.com/300?text=Noctis</image>
+    </performer>
+    <performer id="p57">
+      <name>Frequency Shift</name>
+      <genre>Dub</genre>
+      <bio>Jamaické-československé dub kolaborace se zaměřením na klasické dub techniky.</bio>
+      <country>Jamajka / Česká Republika</country>
+      <image>https://via.placeholder.com/300?text=Frequency</image>
+    </performer>
+    <performer id="p58">
+      <name>Silent Echo</name>
+      <genre>Minimal Ambient</genre>
+      <bio>Rumunská ambient project s minimálními,  subtilními zvuky. Jejich hudba je meditativní a uvolňující.</bio>
+      <country>Rumunsko</country>
+      <image>https://via.placeholder.com/300?text=Silent</image>
+    </performer>
+    <performer id="p59">
+      <name>Aurora Borealis</name>
+      <genre>Nordic Electronica</genre>
+      <bio>Finská electronica kapela inspirovaná severní přírodou. Jejich zvuk je organický a přírodní.</bio>
+      <country>Finsko</country>
+      <image>https://via.placeholder.com/300?text=Aurora</image>
+    </performer>
+    <performer id="p60">
+      <name>The Silent Protocol</name>
+      <genre>Power Electronics</genre>
+      <bio>Německý power electronics projekt s intenzivním, konfrontačním zvukem.</bio>
+      <country>Německo</country>
+      <image>https://via.placeholder.com/300?text=Silent</image>
+    </performer>
+    <performer id="p61">
+      <name>Prism Collective</name>
+      <genre>Math Rock</genre>
+      <bio>Česká math rock kapela s komplexními časovými podpisy a abstraktní hudební strukturou.</bio>
+      <country>Česká Republika</country>
+      <image>https://via.placeholder.com/300?text=Prism</image>
+    </performer>
+    <performer id="p62">
+      <name>Void Echo</name>
+      <genre>Funeral Doom</genre>
+      <bio>Německá funeral doom kapela s velmi pomalým tempem a smutným zvukem.</bio>
+      <country>Německo</country>
+      <image>https://via.placeholder.com/300?text=VoidEcho</image>
+    </performer>
+    <performer id="p63">
+      <name>Cosmic Sounds</name>
+      <genre>Krautrock Inspired</genre>
+      <bio>Švédská kapela inspirovaná klasickým krautrockém. Jejich zvuk je progresivní a experimentální.</bio>
+      <country>Švédsko</country>
+      <image>https://via.placeholder.com/300?text=Cosmic</image>
+    </performer>
+    <performer id="p64">
+      <name>Pulse Wave</name>
+      <genre>Synthpop / NewWave</genre>
+      <bio>Belgická synthpop kapela s new wave vlivy. Jejich upravy jsou catchy a moderní.</bio>
+      <country>Belgie</country>
+      <image>https://via.placeholder.com/300?text=PulseWave</image>
+    </performer>
+  </performers>
+
+  <events>
+    <!-- FRIDAY 19.6.2026 -->
+    <!-- Main Stage -->
+    <event id="e1">
+      <title>Festival Opening</title>
+      <description>Zahájení festivalu. Vítání, informace pro návštěvníky, první hudební účinkující.</description>
+      <startTime>2026-06-19T17:00:00</startTime>
+      <endTime>2026-06-19T17:45:00</endTime>
+      <day>1</day>
+      <venue id="v1"/>
+      <stage id="s1"/>
+      <performers/>
+    </event>
+    <event id="e2">
+      <title>Aurora Band</title>
+      <description>Německá alternativní kapela s psychedelickými prvky.</description>
+      <startTime>2026-06-19T18:00:00</startTime>
+      <endTime>2026-06-19T19:00:00</endTime>
+      <day>1</day>
+      <venue id="v1"/>
+      <stage id="s1"/>
+      <performer id="p13"/>
+    </event>
+    <event id="e3">
+      <title>The Velvet Echoes</title>
+      <description>Indie rock kapela z Prahy s melancholickými skladbami.</description>
+      <startTime>2026-06-19T19:15:00</startTime>
+      <endTime>2026-06-19T20:15:00</endTime>
+      <day>1</day>
+      <venue id="v1"/>
+      <stage id="s1"/>
+      <performer id="p11"/>
+    </event>
+    <event id="e4">
+      <title>Crimson Whisper</title>
+      <description>Britská post-punk revival kapela s energetickými show.</description>
+      <startTime>2026-06-19T20:30:00</startTime>
+      <endTime>2026-06-19T21:30:00</endTime>
+      <day>1</day>
+      <venue id="v1"/>
+      <stage id="s1"/>
+      <performer id="p12"/>
+    </event>
+    <event id="e5">
+      <title>DJ Catalyst</title>
+      <description>Zkušený správce hudby z Amsterdamu se zaměřením na house a techno.</description>
+      <startTime>2026-06-19T21:45:00</startTime>
+      <endTime>2026-06-19T23:15:00</endTime>
+      <day>1</day>
+      <venue id="v1"/>
+      <stage id="s1"/>
+      <performer id="p23"/>
+    </event>
+    <event id="e6">
+      <title>Sonic Drift</title>
+      <description>Holandský DJ s energetickými house sety.</description>
+      <startTime>2026-06-19T23:30:00</startTime>
+      <endTime>2026-06-20T01:30:00</endTime>
+      <day>1</day>
+      <venue id="v1"/>
+      <stage id="s1"/>
+      <performer id="p3"/>
+    </event>
+
+    <!-- Secondary Stage Friday -->
+    <event id="e7">
+      <title>Spark Quintet</title>
+      <description>Pražský jazzový kvintet s moderní improvisací.</description>
+      <startTime>2026-06-19T17:30:00</startTime>
+      <endTime>2026-06-19T18:30:00</endTime>
+      <day>1</day>
+      <venue id="v1"/>
+      <stage id="s2"/>
+      <performer id="p19"/>
+    </event>
+    <event id="e8">
+      <title>Midnight Cascade</title>
+      <description>Belgická dream pop kapela s klidným zvukem.</description>
+      <startTime>2026-06-19T18:45:00</startTime>
+      <endTime>2026-06-19T19:45:00</endTime>
+      <day>1</day>
+      <venue id="v1"/>
+      <stage id="s2"/>
+      <performer id="p14"/>
+    </event>
+    <event id="e9">
+      <title>The Nomads</title>
+      <description>Rakouská indie folk kapela s elektronickými prvky.</description>
+      <startTime>2026-06-19T20:00:00</startTime>
+      <endTime>2026-06-19T21:00:00</endTime>
+      <day>1</day>
+      <venue id="v1"/>
+      <stage id="s2"/>
+      <performer id="p16"/>
+    </event>
+    <event id="e10">
+      <title>Obsidian Echo</title>
+      <description>Švédská kapela s alternativným rockem a progresivní strukturou.</description>
+      <startTime>2026-06-19T21:15:00</startTime>
+      <endTime>2026-06-19T22:15:00</endTime>
+      <day>1</day>
+      <venue id="v1"/>
+      <stage id="s2"/>
+      <performer id="p17"/>
+    </event>
+    <event id="e11">
+      <title>Crystal Waves</title>
+      <description>Vídeňský DJ s progresivní house hudbou.</description>
+      <startTime>2026-06-19T22:30:00</startTime>
+      <endTime>2026-06-20T00:30:00</endTime>
+      <day>1</day>
+      <venue id="v1"/>
+      <stage id="s2"/>
+      <performer id="p36"/>
+    </event>
+
+    <!-- Pavilion Friday -->
+    <event id="e12">
+      <title>Freejazz Collective</title>
+      <description>Finská improvizační skupina bez předem daného schématu.</description>
+      <startTime>2026-06-19T18:00:00</startTime>
+      <endTime>2026-06-19T19:15:00</endTime>
+      <day>1</day>
+      <venue id="v2"/>
+      <stage id="s3"/>
+      <performer id="p20"/>
+    </event>
+    <event id="e13">
+      <title>Sonic Sculpture</title>
+      <description>Zvuková instalace a performance art s experimentálním zvukem.</description>
+      <startTime>2026-06-19T19:30:00</startTime>
+      <endTime>2026-06-19T20:45:00</endTime>
+      <day>1</day>
+      <venue id="v2"/>
+      <stage id="s3"/>
+      <performer id="p21"/>
+    </event>
+    <event id="e14">
+      <title>Pixel Shaper</title>
+      <description>Česká IDM producentka s komplexními rytmickými strukturami.</description>
+      <startTime>2026-06-19T21:00:00</startTime>
+      <endTime>2026-06-19T22:30:00</endTime>
+      <day>1</day>
+      <venue id="v2"/>
+      <stage id="s3"/>
+      <performer id="p9"/>
+    </event>
+    <event id="e15">
+      <title>Frequency Master</title>
+      <description>Osobnost českých klubových scén se specializací v progresivní elektronice.</description>
+      <startTime>2026-06-19T22:45:00</startTime>
+      <endTime>2026-06-20T00:30:00</endTime>
+      <day>1</day>
+      <venue id="v2"/>
+      <stage id="s3"/>
+      <performer id="p25"/>
+    </event>
+
+    <!-- SATURDAY 20.6.2026 -->
+    <!-- Main Stage Saturday -->
+    <event id="e16">
+      <title>Luminous</title>
+      <description>Italská indie pop kapela s pozitivní energií.</description>
+      <startTime>2026-06-20T16:00:00</startTime>
+      <endTime>2026-06-20T17:00:00</endTime>
+      <day>2</day>
+      <venue id="v1"/>
+      <stage id="s1"/>
+      <performer id="p18"/>
+    </event>
+    <event id="e17">
+      <title>Stone Rebels</title>
+      <description>Španělská garage rock kapela s energetickým zdobením.</description>
+      <startTime>2026-06-20T17:15:00</startTime>
+      <endTime>2026-06-20T18:30:00</endTime>
+      <day>2</day>
+      <venue id="v1"/>
+      <stage id="s1"/>
+      <performer id="p15"/>
+    </event>
+    <event id="e18">
+      <title>The Metalheads</title>
+      <description>Britská rock kapela s psychedálními vlivy.</description>
+      <startTime>2026-06-20T18:45:00</startTime>
+      <endTime>2026-06-20T20:00:00</endTime>
+      <day>2</day>
+      <venue id="v1"/>
+      <stage id="s1"/>
+      <performer id="p31"/>
+    </event>
+    <event id="e19">
+      <title>Ethereal Echo</title>
+      <description>Norská synthpop kapela s retro inspirací.</description>
+      <startTime>2026-06-20T20:15:00</startTime>
+      <endTime>2026-06-20T21:30:00</endTime>
+      <day>2</day>
+      <venue id="v1"/>
+      <stage id="s1"/>
+      <performer id="p32"/>
+    </event>
+    <event id="e20">
+      <title>Void Wanders</title>
+      <description>Česká experimentální kapela bez omezení žánrových hranic.</description>
+      <startTime>2026-06-20T21:45:00</startTime>
+      <endTime>2026-06-20T23:00:00</endTime>
+      <day>2</day>
+      <venue id="v1"/>
+      <stage id="s1"/>
+      <performer id="p33"/>
+    </event>
+    <event id="e21">
+      <title>Pulse Collective</title>
+      <description>Polský DJ kolektiv se zaměřením na minimální techno.</description>
+      <startTime>2026-06-20T23:15:00</startTime>
+      <endTime>2026-06-21T01:30:00</endTime>
+      <day>2</day>
+      <venue id="v1"/>
+      <stage id="s1"/>
+      <performer id="p24"/>
+    </event>
+
+    <!-- Secondary Stage Saturday -->
+    <event id="e22">
+      <title>Icebreaker</title>
+      <description>Skandinávská kapela se zimním, chladným zvukem.</description>
+      <startTime>2026-06-20T16:30:00</startTime>
+      <endTime>2026-06-20T17:30:00</endTime>
+      <day>2</day>
+      <venue id="v1"/>
+      <stage id="s2"/>
+      <performer id="p34"/>
+    </event>
+    <event id="e23">
+      <title>Phantom Crew</title>
+      <description>Pražská hip-hopová skupina s elektronickým backingem.</description>
+      <startTime>2026-06-20T17:45:00</startTime>
+      <endTime>2026-06-20T19:00:00</endTime>
+      <day>2</day>
+      <venue id="v1"/>
+      <stage id="s2"/>
+      <performer id="p35"/>
+    </event>
+    <event id="e24">
+      <title>Neon Syndicate</title>
+      <description>Polská synthwave kapela se temným, atmosférickým zvukem.</description>
+      <startTime>2026-06-20T19:15:00</startTime>
+      <endTime>2026-06-20T20:30:00</endTime>
+      <day>2</day>
+      <venue id="v1"/>
+      <stage id="s2"/>
+      <performer id="p37"/>
+    </event>
+    <event id="e25">
+      <title>Dust Collectors</title>
+      <description>Slovenská skupina s fusionem tradičního folku a elektroniky.</description>
+      <startTime>2026-06-20T20:45:00</startTime>
+      <endTime>2026-06-20T22:00:00</endTime>
+      <day>2</day>
+      <venue id="v1"/>
+      <stage id="s2"/>
+      <performer id="p38"/>
+    </event>
+    <event id="e26">
+      <title>Raven Sessions</title>
+      <description>Britský DJ se zaměřením na drum and bass sety.</description>
+      <startTime>2026-06-20T22:15:00</startTime>
+      <endTime>2026-06-21T00:30:00</endTime>
+      <day>2</day>
+      <venue id="v1"/>
+      <stage id="s2"/>
+      <performer id="p26"/>
+    </event>
+
+    <!-- Pavilion Saturday -->
+    <event id="e27">
+      <title>Visual Pulse</title>
+      <description>Audio-vizuální performance kombinující hudbu s živými video projekcemi.</description>
+      <startTime>2026-06-20T17:00:00</startTime>
+      <endTime>2026-06-20T18:30:00</endTime>
+      <day>2</day>
+      <venue id="v2"/>
+      <stage id="s3"/>
+      <performer id="p22"/>
+    </event>
+    <event id="e28">
+      <title>Krystal Struktura</title>
+      <description>Brněnský glitch a noise projekt s intenzivními live performances.</description>
+      <startTime>2026-06-20T18:45:00</startTime>
+      <endTime>2026-06-20T20:15:00</endTime>
+      <day>2</day>
+      <venue id="v2"/>
+      <stage id="s3"/>
+      <performer id="p39"/>
+    </event>
+    <event id="e29">
+      <title>The Void Sessions</title>
+      <description>Dark ambient duo z Německa pro pozdní noční poslech.</description>
+      <startTime>2026-06-20T20:30:00</startTime>
+      <endTime>2026-06-20T22:00:00</endTime>
+      <day>2</day>
+      <venue id="v2"/>
+      <stage id="s3"/>
+      <performer id="p40"/>
+    </event>
+    <event id="e30">
+      <title>Cascade Sounds</title>
+      <description>Belgický DJ se specialistou na jungle a dnb.</description>
+      <startTime>2026-06-20T22:15:00</startTime>
+      <endTime>2026-06-21T00:30:00</endTime>
+      <day>2</day>
+      <venue id="v2"/>
+      <stage id="s3"/>
+      <performer id="p27"/>
+    </event>
+
+    <!-- SUNDAY 21.6.2026 -->
+    <!-- Main Stage Sunday -->
+    <event id="e31">
+      <title>Ultraviolet</title>
+      <description>Francouzská pop banda s elektronickým edgem.</description>
+      <startTime>2026-06-21T15:00:00</startTime>
+      <endTime>2026-06-21T16:15:00</endTime>
+      <day>3</day>
+      <venue id="v1"/>
+      <stage id="s1"/>
+      <performer id="p41"/>
+    </event>
+    <event id="e32">
+      <title>Ground Control</title>
+      <description>Německý producent se zaměřením na kosmickou ambient hudbu.</description>
+      <startTime>2026-06-21T16:30:00</startTime>
+      <endTime>2026-06-21T18:00:00</endTime>
+      <day>3</day>
+      <venue id="v1"/>
+      <stage id="s1"/>
+      <performer id="p42"/>
+    </event>
+    <event id="e33">
+      <title>Polaris</title>
+      <description>Islandská umělkyně kombinující tradiční islandský folk s digitálními nástroji.</description>
+      <startTime>2026-06-21T18:15:00</startTime>
+      <endTime>2026-06-21T19:30:00</endTime>
+      <day>3</day>
+      <venue id="v1"/>
+      <stage id="s1"/>
+      <performer id="p43"/>
+    </event>
+    <event id="e34">
+      <title>Binary Saints</title>
+      <description>Americký synthwave projekt se neonové estetiky.</description>
+      <startTime>2026-06-21T19:45:00</startTime>
+      <endTime>2026-06-21T21:00:00</endTime>
+      <day>3</day>
+      <venue id="v1"/>
+      <stage id="s1"/>
+      <performer id="p44"/>
+    </event>
+    <event id="e35">
+      <title>Kobalt Collective</title>
+      <description>Berlínská techno formace s minimalistickými sety.</description>
+      <startTime>2026-06-21T21:15:00</startTime>
+      <endTime>2026-06-21T23:15:00</endTime>
+      <day>3</day>
+      <venue id="v1"/>
+      <stage id="s1"/>
+      <performer id="p1"/>
+    </event>
+    <event id="e36">
+      <title>Luna Waves</title>
+      <description>Belgická producentka s fokusem na ambient a experimentální elektroniku.</description>
+      <startTime>2026-06-21T23:30:00</startTime>
+      <endTime>2026-06-22T01:30:00</endTime>
+      <day>3</day>
+      <venue id="v1"/>
+      <stage id="s1"/>
+      <performer id="p2"/>
+    </event>
+
+    <!-- Secondary Stage Sunday -->
+    <event id="e37">
+      <title>Acoustic Wires</title>
+      <description>Česká duo kombinující akustické nástroje s elektronickými efekty.</description>
+      <startTime>2026-06-21T15:30:00</startTime>
+      <endTime>2026-06-21T16:45:00</endTime>
+      <day>3</day>
+      <venue id="v1"/>
+      <stage id="s2"/>
+      <performer id="p45"/>
+    </event>
+    <event id="e38">
+      <title>Velocity Pulse</title>
+      <description>Holandský DJ a producent se zaměřením na progresivní trance.</description>
+      <startTime>2026-06-21T17:00:00</startTime>
+      <endTime>2026-06-21T18:30:00</endTime>
+      <day>3</day>
+      <venue id="v1"/>
+      <stage id="s2"/>
+      <performer id="p46"/>
+    </event>
+    <event id="e39">
+      <title>Shadow Play</title>
+      <description>Belgická art rock kapela s komplexními aranžmá.</description>
+      <startTime>2026-06-21T18:45:00</startTime>
+      <endTime>2026-06-21T20:00:00</endTime>
+      <day>3</day>
+      <venue id="v1"/>
+      <stage id="s2"/>
+      <performer id="p47"/>
+    </event>
+    <event id="e40">
+      <title>Cyborg Dreams</title>
+      <description>Švédský producent s futuristickými a sci-fi zvuky.</description>
+      <startTime>2026-06-21T20:15:00</startTime>
+      <endTime>2026-06-21T21:45:00</endTime>
+      <day>3</day>
+      <venue id="v1"/>
+      <stage id="s2"/>
+      <performer id="p48"/>
+    </event>
+    <event id="e41">
+      <title>The Echo Gardens</title>
+      <description>Polská indie electronic kapela s lyričností a estetickou kvalitou.</description>
+      <startTime>2026-06-21T22:00:00</startTime>
+      <endTime>2026-06-22T00:00:00</endTime>
+      <day>3</day>
+      <venue id="v1"/>
+      <stage id="s2"/>
+      <performer id="p49"/>
+    </event>
+
+    <!-- Pavilion Sunday -->
+    <event id="e42">
+      <title>Metamorphosis</title>
+      <description>Česká performance kombinující produkci elektronické hudby s live vizuály.</description>
+      <startTime>2026-06-21T16:00:00</startTime>
+      <endTime>2026-06-21T17:30:00</endTime>
+      <day>3</day>
+      <venue id="v2"/>
+      <stage id="s3"/>
+      <performer id="p4"/>
+    </event>
+    <event id="e43">
+      <title>Apex Rhythms</title>
+      <description>Francouzský techno umělec s fokusem na hardcore a experimentální zvuky.</description>
+      <startTime>2026-06-21T17:45:00</startTime>
+      <endTime>2026-06-21T19:30:00</endTime>
+      <day>3</day>
+      <venue id="v2"/>
+      <stage id="s3"/>
+      <performer id="p5"/>
+    </event>
+    <event id="e44">
+      <title>Echo Realm</title>
+      <description>Experimentální hudebník ze Švédska s atmosferickými soundscapy.</description>
+      <startTime>2026-06-21T19:45:00</startTime>
+      <endTime>2026-06-21T21:15:00</endTime>
+      <day>3</day>
+      <venue id="v2"/>
+      <stage id="s3"/>
+      <performer id="p6"/>
+    </event>
+    <event id="e45">
+      <title>Circuit Breaker</title>
+      <description>Britský producent s agresivním, experimentálním zpracováním elektroniky.</description>
+      <startTime>2026-06-21T21:30:00</startTime>
+      <endTime>2026-06-21T23:00:00</endTime>
+      <day>3</day>
+      <venue id="v2"/>
+      <stage id="s3"/>
+      <performer id="p7"/>
+    </event>
+    <event id="e46">
+      <title>Gravity Well</title>
+      <description>Německá post-rockobická kapela bez vokálů. Instrumentálně bohatá a emočně intenzivní.</description>
+      <startTime>2026-06-21T23:15:00</startTime>
+      <endTime>2026-06-22T01:15:00</endTime>
+      <day>3</day>
+      <venue id="v2"/>
+      <stage id="s3"/>
+      <performer id="p50"/>
+    </event>
+
+    <!-- Additional Events to reach 60+ total -->
+    <event id="e47">
+      <title>Neon Birds Showcase</title>
+      <description>Srbský synthwave projekt s retro flair.</description>
+      <startTime>2026-06-19T15:00:00</startTime>
+      <endTime>2026-06-19T16:00:00</endTime>
+      <day>1</day>
+      <venue id="v2"/>
+      <stage id="s3"/>
+      <performer id="p51"/>
+    </event>
+    <event id="e48">
+      <title>Quantum Flux Performance</title>
+      <description>Česká IDM kapela s komplexními polyrhytmy.</description>
+      <startTime>2026-06-20T14:00:00</startTime>
+      <endTime>2026-06-20T15:00:00</endTime>
+      <day>2</day>
+      <venue id="v2"/>
+      <stage id="s3"/>
+      <performer id="p52"/>
+    </event>
+    <event id="e49">
+      <title>Velvet Underground Tribute</title>
+      <description>Vídeňská kapela věnovaná Velvet Underground s vlastním twist.</description>
+      <startTime>2026-06-19T19:00:00</startTime>
+      <endTime>2026-06-19T20:00:00</endTime>
+      <day>1</day>
+      <venue id="v1"/>
+      <stage id="s2"/>
+      <performer id="p53"/>
+    </event>
+    <event id="e50">
+      <title>Chromatic Dreams Session</title>
+      <description>Švýcarská synthpop duo.</description>
+      <startTime>2026-06-20T15:00:00</startTime>
+      <endTime>2026-06-20T16:00:00</endTime>
+      <day>2</day>
+      <venue id="v1"/>
+      <stage id="s2"/>
+      <performer id="p54"/>
+    </event>
+    <event id="e51">
+      <title>Liquid Shadows DJ Set</title>
+      <description>Britský DJ zaměřený na liquid funk.</description>
+      <startTime>2026-06-20T13:00:00</startTime>
+      <endTime>2026-06-20T14:00:00</endTime>
+      <day>2</day>
+      <venue id="v2"/>
+      <stage id="s3"/>
+      <performer id="p55"/>
+    </event>
+    <event id="e52">
+      <title>Noctis After Dark</title>
+      <description>Italský darksynth projekt s gotickými vlivy.</description>
+      <startTime>2026-06-19T22:00:00</startTime>
+      <endTime>2026-06-19T23:30:00</endTime>
+      <day>1</day>
+      <venue id="v1"/>
+      <stage id="s2"/>
+      <performer id="p56"/>
+    </event>
+    <event id="e53">
+      <title>Frequency Shift Set</title>
+      <description>Jamaické-československé dub kolaborace.</description>
+      <startTime>2026-06-20T12:00:00</startTime>
+      <endTime>2026-06-20T13:00:00</endTime>
+      <day>2</day>
+      <venue id="v1"/>
+      <stage id="s1"/>
+      <performer id="p57"/>
+    </event>
+    <event id="e54">
+      <title>Silent Echo Meditation</title>
+      <description>Rumunská ambient project.</description>
+      <startTime>2026-06-21T12:00:00</startTime>
+      <endTime>2026-06-21T13:30:00</endTime>
+      <day>3</day>
+      <venue id="v2"/>
+      <stage id="s3"/>
+      <performer id="p58"/>
+    </event>
+    <event id="e55">
+      <title>Aurora Borealis Live</title>
+      <description>Finská electronica kapela inspirovaná severní přírodou.</description>
+      <startTime>2026-06-21T14:00:00</startTime>
+      <endTime>2026-06-21T15:00:00</endTime>
+      <day>3</day>
+      <venue id="v1"/>
+      <stage id="s2"/>
+      <performer id="p59"/>
+    </event>
+    <event id="e56">
+      <title>The Silent Protocol Showcase</title>
+      <description>Německý power electronics projekt.</description>
+      <startTime>2026-06-19T14:00:00</startTime>
+      <endTime>2026-06-19T15:00:00</endTime>
+      <day>1</day>
+      <venue id="v1"/>
+      <stage id="s1"/>
+      <performer id="p60"/>
+    </event>
+    <event id="e57">
+      <title>Prism Collective Mathematics</title>
+      <description>Česká math rock kapela s komplexními časovými podpisy.</description>
+      <startTime>2026-06-20T11:00:00</startTime>
+      <endTime>2026-06-20T12:00:00</endTime>
+      <day>2</day>
+      <venue id="v2"/>
+      <stage id="s3"/>
+      <performer id="p61"/>
+    </event>
+    <event id="e58">
+      <title>Void Echo Requiem</title>
+      <description>Německá funeral doom kapela.</description>
+      <startTime>2026-06-19T20:30:00</startTime>
+      <endTime>2026-06-19T22:00:00</endTime>
+      <day>1</day>
+      <venue id="v1"/>
+      <stage id="s2"/>
+      <performer id="p62"/>
+    </event>
+    <event id="e59">
+      <title>Cosmic Sounds Journey</title>
+      <description>Švédská kapela inspirovaná krautrockém.</description>
+      <startTime>2026-06-20T10:00:00</startTime>
+      <endTime>2026-06-20T11:00:00</endTime>
+      <day>2</day>
+      <venue id="v1"/>
+      <stage id="s1"/>
+      <performer id="p63"/>
+    </event>
+    <event id="e60">
+      <title>Pulse Wave Retro Night</title>
+      <description>Belgická synthpop kapela s new wave vlivy.</description>
+      <startTime>2026-06-19T16:00:00</startTime>
+      <endTime>2026-06-19T17:00:00</endTime>
+      <day>1</day>
+      <venue id="v1"/>
+      <stage id="s1"/>
+      <performer id="p64"/>
+    </event>
+    <event id="e61">
+      <title>Subwoofer Dreams Marathon</title>
+      <description>DJ s australským původem s deep house sety.</description>
+      <startTime>2026-06-20T09:00:00</startTime>
+      <endTime>2026-06-20T10:00:00</endTime>
+      <day>2</day>
+      <venue id="v2"/>
+      <stage id="s3"/>
+      <performer id="p8"/>
+    </event>
+    <event id="e62">
+      <title>Neon Vortex Extended Set</title>
+      <description>Polský synth-pop projekt s retro-futuristickým zvukem.</description>
+      <startTime>2026-06-21T13:00:00</startTime>
+      <endTime>2026-06-21T14:00:00</endTime>
+      <day>3</day>
+      <venue id="v1"/>
+      <stage id="s1"/>
+      <performer id="p10"/>
+    </event>
+    <event id="e63">
+      <title>Midnight DJ Crew All-Night Set</title>
+      <description>Maďarský DJ crew se zaměřením na nocturní house.</description>
+      <startTime>2026-06-20T23:45:00</startTime>
+      <endTime>2026-06-21T06:00:00</endTime>
+      <day>2</day>
+      <venue id="v1"/>
+      <stage id="s2"/>
+      <performer id="p28"/>
+    </event>
+    <event id="e64">
+      <title>Echo Decays Industrial Techno</title>
+      <description>Rumunský DJ a producent se zaměřením na industriální techno.</description>
+      <startTime>2026-06-20T08:00:00</startTime>
+      <endTime>2026-06-20T09:00:00</endTime>
+      <day>2</day>
+      <venue id="v1"/>
+      <stage id="s1"/>
+      <performer id="p29"/>
+    </event>
+    <event id="e65">
+      <title>Solar Rhythms Afrobeat Fusion</title>
+      <description>DJ z Káhiry se fusionuje afrobeat s elektronickou hudbou.</description>
+      <startTime>2026-06-19T13:00:00</startTime>
+      <endTime>2026-06-19T14:00:00</endTime>
+      <day>1</day>
+      <venue id="v2"/>
+      <stage id="s3"/>
+      <performer id="p30"/>
+    </event>
+  </events>
+</festival>

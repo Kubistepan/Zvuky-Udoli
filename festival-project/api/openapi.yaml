@@ -1,0 +1,702 @@
+openapi: 3.1.0
+info:
+  title: ZVUKY ÚDOLÍ Festival API
+  description: REST API for Zvuky Udoli Music Festival 2026
+  version: 1.0.0
+  contact:
+    name: Festival Support
+    email: info@zvukydoli.cz
+    url: https://zvukydoli.cz
+  license:
+    name: CC-BY-4.0
+    url: https://creativecommons.org/licenses/by/4.0/
+
+servers:
+  - url: https://api.zvukydoli.cz/api
+    description: Production server
+  - url: http://localhost:3000/api
+    description: Development server
+
+tags:
+  - name: Festival
+    description: Festival information endpoints
+  - name: Venues
+    description: Venue and stage information
+  - name: Performers
+    description: Performer information
+  - name: Events
+    description: Festival events and program
+
+paths:
+  /festival:
+    get:
+      tags:
+        - Festival
+      summary: Get festival information
+      description: Retrieve basic festival metadata including dates, location, contact info, and ticketing prices
+      operationId: getFestival
+      responses:
+        '200':
+          description: Festival information retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Festival'
+              example:
+                id: zvuky-udoli-2026
+                name: ZVUKY ÚDOLÍ
+                year: 2026
+                edition: 1
+                location: Údolí nad Zdobnicí, Česká Republika
+                startDate: '2026-06-19'
+                endDate: '2026-06-21'
+                totalPerformers: 64
+                totalEvents: 65
+                totalVenues: 2
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /venues:
+    get:
+      tags:
+        - Venues
+      summary: Get all venues
+      description: Retrieve list of all festival venues with their stages and capacity information
+      operationId: getVenues
+      responses:
+        '200':
+          description: List of venues retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/VenueList'
+                  count:
+                    type: integer
+                    example: 2
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /venues/{id}:
+    get:
+      tags:
+        - Venues
+      summary: Get venue by ID
+      description: Retrieve detailed information about a specific venue including all its stages
+      operationId: getVenueById
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Venue ID (e.g., v1, v2)
+          schema:
+            type: string
+            pattern: '^v[0-9]+$'
+          example: v1
+      responses:
+        '200':
+          description: Venue details retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VenueDetail'
+        '400':
+          description: Invalid venue ID format
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Venue not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /performers:
+    get:
+      tags:
+        - Performers
+      summary: Get all performers
+      description: Retrieve paginated list of all festival performers with genre and country information
+      operationId: getPerformers
+      parameters:
+        - name: page
+          in: query
+          required: false
+          description: Page number (1-based indexing)
+          schema:
+            type: integer
+            minimum: 1
+            default: 1
+          example: 1
+        - name: pageSize
+          in: query
+          required: false
+          description: Number of performers per page
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+            default: 50
+          example: 50
+      responses:
+        '200':
+          description: List of performers retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/PerformerList'
+                  count:
+                    type: integer
+                    description: Total number of performers
+                    example: 64
+                  pagination:
+                    $ref: '#/components/schemas/Pagination'
+        '400':
+          description: Invalid pagination parameters
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /performers/{id}:
+    get:
+      tags:
+        - Performers
+      summary: Get performer by ID
+      description: Retrieve detailed information about a specific performer including biography and performance genre
+      operationId: getPerformerById
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Performer ID (e.g., p1, p2)
+          schema:
+            type: string
+            pattern: '^p[0-9]+$'
+          example: p1
+      responses:
+        '200':
+          description: Performer details retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PerformerDetail'
+        '400':
+          description: Invalid performer ID format
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Performer not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /events:
+    get:
+      tags:
+        - Events
+      summary: Get all festival events
+      description: Retrieve paginated list of all festival events with optional filtering by day and/or venue
+      operationId: getEvents
+      parameters:
+        - name: day
+          in: query
+          required: false
+          description: Filter events by festival day (1, 2, or 3)
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 3
+          example: 1
+        - name: venueId
+          in: query
+          required: false
+          description: Filter events by venue ID (e.g., v1, v2)
+          schema:
+            type: string
+            pattern: '^v[0-9]+$'
+          example: v1
+        - name: performerId
+          in: query
+          required: false
+          description: Filter events by performer ID (e.g., p1, p64)
+          schema:
+            type: string
+            pattern: '^p[0-9]+$'
+          example: p1
+        - name: page
+          in: query
+          required: false
+          description: Page number (1-based indexing)
+          schema:
+            type: integer
+            minimum: 1
+            default: 1
+        - name: pageSize
+          in: query
+          required: false
+          description: Number of events per page
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+            default: 50
+      responses:
+        '200':
+          description: List of events retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/EventList'
+                  count:
+                    type: integer
+                    description: Total number of events matching filters
+                    example: 65
+                  pagination:
+                    $ref: '#/components/schemas/Pagination'
+        '400':
+          description: Invalid filter or pagination parameters
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /events/{id}:
+    get:
+      tags:
+        - Events
+      summary: Get event by ID
+      description: Retrieve detailed information about a specific festival event including time, venue, stage, and performer information
+      operationId: getEventById
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Event ID (e.g., e1, e65)
+          schema:
+            type: string
+            pattern: '^e[0-9]+$'
+          example: e1
+      responses:
+        '200':
+          description: Event details retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EventDetail'
+        '400':
+          description: Invalid event ID format
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Event not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+components:
+  schemas:
+    Festival:
+      type: object
+      required:
+        - id
+        - name
+        - year
+        - location
+        - startDate
+        - endDate
+      properties:
+        id:
+          type: string
+          description: Unique festival identifier
+          example: zvuky-udoli-2026
+        name:
+          type: string
+          description: Festival name
+          example: ZVUKY ÚDOLÍ
+        year:
+          type: integer
+          description: Year of the festival
+          example: 2026
+        edition:
+          type: integer
+          description: Festival edition number
+          example: 1
+        location:
+          type: string
+          description: Festival location
+          example: Údolí nad Zdobnicí, Česká Republika
+        startDate:
+          type: string
+          format: date
+          description: Festival start date
+          example: '2026-06-19'
+        endDate:
+          type: string
+          format: date
+          description: Festival end date
+          example: '2026-06-21'
+        description:
+          type: string
+          description: Detailed festival description
+        website:
+          type: string
+          format: uri
+          description: Official festival website
+          example: https://zvukydoli.cz
+        email:
+          type: string
+          format: email
+          description: Festival contact email
+          example: info@zvukydoli.cz
+        phoneNumber:
+          type: string
+          description: Festival contact phone
+          example: '+420 731 234 567'
+        totalPerformers:
+          type: integer
+          description: Total number of performers
+          example: 64
+        totalEvents:
+          type: integer
+          description: Total number of events
+          example: 65
+        totalVenues:
+          type: integer
+          description: Total number of venues
+          example: 2
+        ticketing:
+          type: object
+          properties:
+            singleDayPrice:
+              type: number
+              description: Price for single day ticket in CZK
+              example: 500
+            twoDayPrice:
+              type: number
+              example: 900
+            fullFestivalPrice:
+              type: number
+              description: Price for 3-day festival pass in CZK
+              example: 1300
+            currency:
+              type: string
+              example: CZK
+
+    VenueList:
+      type: object
+      required:
+        - id
+        - name
+        - capacity
+      properties:
+        id:
+          type: string
+          pattern: '^v[0-9]+$'
+          example: v1
+        name:
+          type: string
+          example: Hlavní Areál
+        description:
+          type: string
+          example: Venkovní prostor s dvěma hlavními scénami
+        address:
+          type: string
+        capacity:
+          type: integer
+          minimum: 1
+          example: 5000
+        stagesCount:
+          type: integer
+          example: 2
+
+    VenueDetail:
+      type: object
+      required:
+        - id
+        - name
+        - capacity
+        - stages
+      properties:
+        id:
+          type: string
+          pattern: '^v[0-9]+$'
+          example: v1
+        name:
+          type: string
+          example: Hlavní Areál
+        description:
+          type: string
+        address:
+          type: string
+          example: Údolská Nádraží 45, 789 01 Údolí nad Zdobnicí
+        capacity:
+          type: integer
+          minimum: 1
+          example: 5000
+        stages:
+          type: array
+          minItems: 1
+          items:
+            $ref: '#/components/schemas/Stage'
+
+    Stage:
+      type: object
+      required:
+        - id
+        - name
+        - capacity
+        - type
+      properties:
+        id:
+          type: string
+          pattern: '^s[0-9]+$'
+          example: s1
+        name:
+          type: string
+          example: Primární Scéna
+        capacity:
+          type: integer
+          minimum: 1
+          example: 3000
+        type:
+          type: string
+          enum: [outdoor, indoor, pavilion]
+          example: outdoor
+
+    PerformerList:
+      type: object
+      required:
+        - id
+        - name
+        - genre
+        - country
+      properties:
+        id:
+          type: string
+          pattern: '^p[0-9]+$'
+          example: p1
+        name:
+          type: string
+          example: Kobalt Collective
+        genre:
+          type: string
+          example: Techno
+        country:
+          type: string
+          example: Německo
+        image:
+          type: string
+          format: uri
+
+    PerformerDetail:
+      type: object
+      required:
+        - id
+        - name
+        - genre
+      properties:
+        id:
+          type: string
+          pattern: '^p[0-9]+$'
+          example: p1
+        name:
+          type: string
+          example: Kobalt Collective
+        genre:
+          type: string
+          example: Techno
+        bio:
+          type: string
+          description: Performer biography
+          example: Berlínská techno formace známá minimalistickými a hypnotickými sety.
+        country:
+          type: string
+          example: Německo
+        image:
+          type: string
+          format: uri
+
+    EventList:
+      type: object
+      required:
+        - id
+        - title
+        - startTime
+        - endTime
+        - day
+      properties:
+        id:
+          type: string
+          pattern: '^e[0-9]+$'
+          example: e1
+        title:
+          type: string
+          example: Festival Opening
+        description:
+          type: string
+          example: Zahájení festivalu. Vítání, informace pro návštěvníky, první hudební účinkující.
+        startTime:
+          type: string
+          format: date-time
+          example: '2026-06-19T17:00:00'
+        endTime:
+          type: string
+          format: date-time
+          example: '2026-06-19T17:45:00'
+        day:
+          type: integer
+          minimum: 1
+          maximum: 3
+          example: 1
+        venueId:
+          type: string
+          pattern: '^v[0-9]+$'
+          example: v1
+        stageId:
+          type: string
+          pattern: '^s[0-9]+$'
+          example: s1
+        performerId:
+          type: string
+          pattern: '^p[0-9]+$'
+          nullable: true
+
+    EventDetail:
+      type: object
+      required:
+        - id
+        - title
+        - startTime
+        - endTime
+        - day
+      properties:
+        id:
+          type: string
+          pattern: '^e[0-9]+$'
+          example: e1
+        title:
+          type: string
+          example: Festival Opening
+        description:
+          type: string
+          example: Zahájení festivalu. Vítání, informace pro návštěvníky, první hudební účinkující.
+        startTime:
+          type: string
+          format: date-time
+          example: '2026-06-19T17:00:00'
+        endTime:
+          type: string
+          format: date-time
+          example: '2026-06-19T17:45:00'
+        day:
+          type: integer
+          minimum: 1
+          maximum: 3
+          example: 1
+        venueId:
+          type: string
+          pattern: '^v[0-9]+$'
+          example: v1
+        stageId:
+          type: string
+          pattern: '^s[0-9]+$'
+          example: s1
+        performerId:
+          type: string
+          pattern: '^p[0-9]+$'
+          nullable: true
+          description: Reference to performer ID, null for opening/closing events
+
+    Pagination:
+      type: object
+      properties:
+        page:
+          type: integer
+          minimum: 1
+          example: 1
+        pageSize:
+          type: integer
+          minimum: 1
+          example: 50
+        totalPages:
+          type: integer
+          minimum: 1
+          example: 2
+
+    Error:
+      type: object
+      required:
+        - code
+        - message
+      properties:
+        code:
+          type: string
+          example: INVALID_REQUEST
+        message:
+          type: string
+          example: Invalid request parameters
+        timestamp:
+          type: string
+          format: date-time
+          example: '2026-06-19T10:00:00Z'

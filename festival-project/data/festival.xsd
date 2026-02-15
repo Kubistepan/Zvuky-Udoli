@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+  <!-- ============================================ -->
+  <!-- CUSTOM SIMPLE TYPES WITH CONSTRAINTS       -->
+  <!-- ============================================ -->
+
+  <!-- CUSTOM CONSTRAINT: Date format YYYY-MM-DD (e.g., 2026-06-19) -->
+  <xs:simpleType name="dateType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{4}-\d{2}-\d{2}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- CUSTOM CONSTRAINT: Time format HH:MM:SS (e.g., 17:00:00) -->
+  <xs:simpleType name="timeType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{2}:\d{2}:\d{2}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- CUSTOM CONSTRAINT: DateTime format YYYY-MM-DDTHH:MM:SS (ISO 8601) -->
+  <xs:simpleType name="dateTimeType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- CUSTOM CONSTRAINT: Phone number format +420 followed by 9 digits (Czech format) -->
+  <xs:simpleType name="phoneType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\+420 \d{3} \d{3} \d{3}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- CUSTOM CONSTRAINT: Email format validation -->
+  <xs:simpleType name="emailType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- CUSTOM CONSTRAINT: Positive integer for capacity (min 1, max 100000) -->
+  <xs:simpleType name="capacityType">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="1"/>
+      <xs:maxInclusive value="100000"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- CUSTOM CONSTRAINT: Festival edition year (1-10 editions maximum) -->
+  <xs:simpleType name="editionType">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="1"/>
+      <xs:maxInclusive value="10"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- CUSTOM CONSTRAINT: Year must be 4 digits (2000-2099) -->
+  <xs:simpleType name="yearType">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="2000"/>
+      <xs:maxInclusive value="2099"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- CUSTOM CONSTRAINT: Day number in festival (1, 2, or 3 for 3-day festival) -->
+  <xs:simpleType name="dayNumberType">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="1"/>
+      <xs:maxInclusive value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- CUSTOM CONSTRAINT: Enumeration of music genres -->
+  <xs:simpleType name="genreType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Techno"/>
+      <xs:enumeration value="Ambient Electronic"/>
+      <xs:enumeration value="House"/>
+      <xs:enumeration value="Progressive Electronic"/>
+      <xs:enumeration value="Industrial Electronic"/>
+      <xs:enumeration value="Deep House"/>
+      <xs:enumeration value="IDM"/>
+      <xs:enumeration value="Synthwave"/>
+      <xs:enumeration value="Indie Rock"/>
+      <xs:enumeration value="Post-Punk Revival"/>
+      <xs:enumeration value="Alternative"/>
+      <xs:enumeration value="Dream Pop"/>
+      <xs:enumeration value="Garage Rock"/>
+      <xs:enumeration value="Indie Folk"/>
+      <xs:enumeration value="Alternative Rock"/>
+      <xs:enumeration value="Indie Pop"/>
+      <xs:enumeration value="Modern Jazz"/>
+      <xs:enumeration value="Free Jazz"/>
+      <xs:enumeration value="Sound Art"/>
+      <xs:enumeration value="Audio-Visual Performance"/>
+      <xs:enumeration value="House / Techno"/>
+      <xs:enumeration value="Minimal Techno"/>
+      <xs:enumeration value="Electronic"/>
+      <xs:enumeration value="Drum and Bass"/>
+      <xs:enumeration value="Jungle"/>
+      <xs:enumeration value="Afrobeat / Electronic"/>
+      <xs:enumeration value="Psychedelic Rock"/>
+      <xs:enumeration value="Synthpop"/>
+      <xs:enumeration value="Experimental Rock"/>
+      <xs:enumeration value="Hip-Hop / Electronic"/>
+      <xs:enumeration value="Glitch / Noise"/>
+      <xs:enumeration value="Dark Ambient"/>
+      <xs:enumeration value="Electropop"/>
+      <xs:enumeration value="Space Ambient"/>
+      <xs:enumeration value="Digital Folk"/>
+      <xs:enumeration value="Retrowave"/>
+      <xs:enumeration value="Acoustic Electronic"/>
+      <xs:enumeration value="Trance"/>
+      <xs:enumeration value="Art Rock"/>
+      <xs:enumeration value="Futuristic Electronic"/>
+      <xs:enumeration value="Indie Electronic"/>
+      <xs:enumeration value="Post-Rock"/>
+      <xs:enumeration value="Darksynth"/>
+      <xs:enumeration value="Dub"/>
+      <xs:enumeration value="Minimal Ambient"/>
+      <xs:enumeration value="Nordic Electronica"/>
+      <xs:enumeration value="Power Electronics"/>
+      <xs:enumeration value="Math Rock"/>
+      <xs:enumeration value="Funeral Doom"/>
+      <xs:enumeration value="Krautrock Inspired"/>
+      <xs:enumeration value="Synthpop / NewWave"/>
+      <xs:enumeration value="Liquid Funk"/>
+      <xs:enumeration value="Folk / Electronic"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- CUSTOM CONSTRAINT: Venue type (outdoor/indoor) -->
+  <xs:simpleType name="venueTypeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="outdoor"/>
+      <xs:enumeration value="indoor"/>
+      <xs:enumeration value="mixed"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- CUSTOM CONSTRAINT: Stage type -->
+  <xs:simpleType name="stageTypeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="outdoor"/>
+      <xs:enumeration value="indoor"/>
+      <xs:enumeration value="pavilion"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- CUSTOM CONSTRAINT: Non-empty string (minimum 1 character) -->
+  <xs:simpleType name="nonEmptyString">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- CUSTOM CONSTRAINT: ID format (starts with letter, alphanumeric) -->
+  <xs:simpleType name="idType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[a-z]{1}[a-z0-9]*"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- ============================================ -->
+  <!-- COMPLEX TYPES                               -->
+  <!-- ============================================ -->
+
+  <!-- Metadata element containing festival info -->
+  <xs:complexType name="metadataType">
+    <xs:sequence>
+      <xs:element name="name" type="nonEmptyString"/>
+      <xs:element name="year" type="yearType"/>
+      <xs:element name="edition" type="editionType"/>
+      <xs:element name="location" type="nonEmptyString"/>
+      <xs:element name="startDate" type="dateType"/>
+      <xs:element name="endDate" type="dateType"/>
+      <xs:element name="description" type="nonEmptyString"/>
+      <xs:element name="website" type="xs:anyURI"/>
+      <xs:element name="email" type="emailType"/>
+      <xs:element name="phoneNumber" type="phoneType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Stage element -->
+  <xs:complexType name="stageType">
+    <xs:sequence>
+      <xs:element name="name" type="nonEmptyString"/>
+      <xs:element name="capacity" type="capacityType"/>
+      <xs:element name="type" type="stageTypeType"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="idType" use="required"/>
+  </xs:complexType>
+
+  <!-- Stages collection -->
+  <xs:complexType name="stagesType">
+    <xs:sequence>
+      <xs:element name="stage" type="stageType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Venue element -->
+  <xs:complexType name="venueType">
+    <xs:sequence>
+      <xs:element name="name" type="nonEmptyString"/>
+      <xs:element name="description" type="nonEmptyString"/>
+      <xs:element name="address" type="nonEmptyString"/>
+      <xs:element name="capacity" type="capacityType"/>
+      <xs:element name="stages" type="stagesType"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="idType" use="required"/>
+  </xs:complexType>
+
+  <!-- Venues collection -->
+  <xs:complexType name="venuesType">
+    <xs:sequence>
+      <xs:element name="venue" type="venueType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Performer element -->
+  <xs:complexType name="performerType">
+    <xs:sequence>
+      <xs:element name="name" type="nonEmptyString"/>
+      <xs:element name="genre" type="genreType"/>
+      <xs:element name="bio" type="nonEmptyString"/>
+      <xs:element name="country" type="nonEmptyString"/>
+      <xs:element name="image" type="xs:anyURI"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="idType" use="required"/>
+  </xs:complexType>
+
+  <!-- Performers collection -->
+  <xs:complexType name="performersType">
+    <xs:sequence>
+      <xs:element name="performer" type="performerType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Event element -->
+  <xs:complexType name="eventType">
+    <xs:sequence>
+      <xs:element name="title" type="nonEmptyString"/>
+      <xs:element name="description" type="nonEmptyString"/>
+      <xs:element name="startTime" type="dateTimeType"/>
+      <xs:element name="endTime" type="dateTimeType"/>
+      <xs:element name="day" type="dayNumberType"/>
+      <xs:element name="venue" type="xs:string"/>
+      <xs:element name="stage" type="xs:string"/>
+      <xs:element name="performer" type="xs:string" minOccurs="0"/>
+      <xs:element name="performers" minOccurs="0">
+        <xs:complexType/>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="id" type="idType" use="required"/>
+  </xs:complexType>
+
+  <!-- Events collection -->
+  <xs:complexType name="eventsType">
+    <xs:sequence>
+      <xs:element name="event" type="eventType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- ============================================ -->
+  <!-- ROOT ELEMENT                                -->
+  <!-- ============================================ -->
+
+  <xs:element name="festival">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="metadata" type="metadataType"/>
+        <xs:element name="venues" type="venuesType"/>
+        <xs:element name="performers" type="performersType"/>
+        <xs:element name="events" type="eventsType"/>
+      </xs:sequence>
+    </xs:complexType>
+    
+    <!-- CUSTOM CONSTRAINT: Unique IDs across all venues -->
+    <xs:key name="venueIdKey">
+      <xs:selector xpath=".//venue"/>
+      <xs:field xpath="@id"/>
+    </xs:key>
+    
+    <!-- CUSTOM CONSTRAINT: Unique IDs across all stages -->
+    <xs:key name="stageIdKey">
+      <xs:selector xpath=".//stage"/>
+      <xs:field xpath="@id"/>
+    </xs:key>
+    
+    <!-- CUSTOM CONSTRAINT: Unique IDs across all performers -->
+    <xs:key name="performerIdKey">
+      <xs:selector xpath=".//performer"/>
+      <xs:field xpath="@id"/>
+    </xs:key>
+    
+    <!-- CUSTOM CONSTRAINT: Unique IDs across all events -->
+    <xs:key name="eventIdKey">
+      <xs:selector xpath=".//event"/>
+      <xs:field xpath="@id"/>
+    </xs:key>
+    
+    <!-- CUSTOM CONSTRAINT: Event performer reference must match existing performer ID -->
+    <xs:keyref name="eventPerformerRef" refer="performerIdKey">
+      <xs:selector xpath=".//event/performer"/>
+      <xs:field xpath="."/>
+    </xs:keyref>
+    
+    <!-- CUSTOM CONSTRAINT: Event venue reference must match existing venue ID -->
+    <xs:keyref name="eventVenueRef" refer="venueIdKey">
+      <xs:selector xpath=".//event/venue"/>
+      <xs:field xpath="."/>
+    </xs:keyref>
+    
+    <!-- CUSTOM CONSTRAINT: Event stage reference must match existing stage ID -->
+    <xs:keyref name="eventStageRef" refer="stageIdKey">
+      <xs:selector xpath=".//event/stage"/>
+      <xs:field xpath="."/>
+    </xs:keyref>
+
+  </xs:element>
+
+</xs:schema>

@@ -1,0 +1,43 @@
+{
+  "data": [
+    {
+      "id": "e1",
+      "title": "Festival Opening",
+      "description": "Zahájení festivalu. Vítání, informace pro návštěvníky, první hudební účinkující.",
+      "startTime": "2026-06-19T17:00:00",
+      "endTime": "2026-06-19T17:45:00",
+      "day": 1,
+      "venueId": "v1",
+      "stageId": "s1",
+      "performerId": ""
+    },
+    {
+      "id": "e2",
+      "title": "Aurora Band",
+      "description": "Německá alternativní kapela s psychedelickými prvky.",
+      "startTime": "2026-06-19T18:00:00",
+      "endTime": "2026-06-19T19:00:00",
+      "day": 1,
+      "venueId": "v1",
+      "stageId": "s1",
+      "performerId": "p13"
+    },
+    {
+      "id": "e3",
+      "title": "The Velvet Echoes",
+      "description": "Indie rock kapela z Prahy s melancholickými skladbami.",
+      "startTime": "2026-06-19T19:15:00",
+      "endTime": "2026-06-19T20:15:00",
+      "day": 1,
+      "venueId": "v1",
+      "stageId": "s1",
+      "performerId": "p11"
+    }
+  ],
+  "count": 65,
+  "pagination": {
+    "page": 1,
+    "pageSize": 50,
+    "totalPages": 2
+  }
+}

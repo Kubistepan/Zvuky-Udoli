@@ -1,0 +1,21 @@
+{
+  "id": "v1",
+  "name": "Hlavní Areál",
+  "description": "Venkovní prostor s dvěma hlavními scénami",
+  "address": "Údolská Nádraží 45, 789 01 Údolí nad Zdobnicí",
+  "capacity": 5000,
+  "stages": [
+    {
+      "id": "s1",
+      "name": "Primární Scéna",
+      "capacity": 3000,
+      "type": "outdoor"
+    },
+    {
+      "id": "s2",
+      "name": "Sekundární Scéna",
+      "capacity": 2000,
+      "type": "outdoor"
+    }
+  ]
+}

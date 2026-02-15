@@ -1,0 +1,22 @@
+{
+  "id": "zvuky-udoli-2026",
+  "name": "ZVUKY ÚDOLÍ",
+  "year": 2026,
+  "edition": 1,
+  "location": "Údolí nad Zdobnicí, Česká Republika",
+  "startDate": "2026-06-19",
+  "endDate": "2026-06-21",
+  "description": "Multižánrový hudební festival zaměřený na elektronickou hudbu, indie rock a experimentální zvuk.",
+  "website": "https://zvukydoli.cz",
+  "email": "info@zvukydoli.cz",
+  "phoneNumber": "+420 731 234 567",
+  "totalPerformers": 64,
+  "totalEvents": 65,
+  "totalVenues": 2,
+  "ticketing": {
+    "singleDayPrice": 500,
+    "twoDayPrice": 900,
+    "fullFestivalPrice": 1300,
+    "currency": "CZK"
+  }
+}

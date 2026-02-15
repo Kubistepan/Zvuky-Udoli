@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Venues Schema",
+  "description": "Schema for GET /api/venues endpoint - list of all venues",
+  "type": "object",
+  "required": ["data", "count"],
+  "properties": {
+    "data": {
+      "type": "array",
+      "minItems": 0,
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "address", "capacity"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^v[0-9]+$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string",
+            "minLength": 1
+          },
+          "capacity": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 100000
+          },
+          "stagesCount": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "stages": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": { "type": "string" },
+                "name": { "type": "string" },
+                "capacity": { "type": "integer" },
+                "type": { "type": "string", "enum": ["outdoor", "indoor", "pavilion"] }
+              }
+            }
+          }
+        }
+      }
+    },
+    "count": {
+      "type": "integer",
+      "minimum": 0
+    }
+  }
+}

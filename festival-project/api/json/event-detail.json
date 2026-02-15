@@ -1,0 +1,11 @@
+{
+  "id": "e1",
+  "title": "Festival Opening",
+  "description": "Zahájení festivalu. Vítání, informace pro návštěvníky, první hudební účinkující.",
+  "startTime": "2026-06-19T17:00:00",
+  "endTime": "2026-06-19T17:45:00",
+  "day": 1,
+  "venueId": "v1",
+  "stageId": "s1",
+  "performerId": ""
+}

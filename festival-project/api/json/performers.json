@@ -1,0 +1,45 @@
+{
+  "data": [
+    {
+      "id": "p1",
+      "name": "Kobalt Collective",
+      "genre": "Techno",
+      "country": "Německo",
+      "image": "https://via.placeholder.com/300?text=Kobalt"
+    },
+    {
+      "id": "p2",
+      "name": "Luna Waves",
+      "genre": "Ambient Electronic",
+      "country": "Belgie",
+      "image": "https://via.placeholder.com/300?text=Luna"
+    },
+    {
+      "id": "p3",
+      "name": "Sonic Drift",
+      "genre": "House",
+      "country": "Nizozemí",
+      "image": "https://via.placeholder.com/300?text=Sonic"
+    },
+    {
+      "id": "p4",
+      "name": "Metamorphosis",
+      "genre": "Progressive Electronic",
+      "country": "Česká Republika",
+      "image": "https://via.placeholder.com/300?text=Metamorphosis"
+    },
+    {
+      "id": "p5",
+      "name": "Apex Rhythms",
+      "genre": "Techno",
+      "country": "Francie",
+      "image": "https://via.placeholder.com/300?text=Apex"
+    }
+  ],
+  "count": 64,
+  "pagination": {
+    "page": 1,
+    "pageSize": 5,
+    "totalPages": 13
+  }
+}

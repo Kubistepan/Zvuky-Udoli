@@ -1,0 +1,352 @@
+/* ==============================================
+   ZVUKY ÚDOLÍ Festival - Main Stylesheet
+   Author: Festival Team
+   Version: 1.0
+   ============================================== */
+
+/* ----- ROOT STYLES & VARIABLES ----- */
+:root {
+    --primary-color: #1a1a2e;
+    --accent-color: #ff006e;
+    --secondary-color: #00d9ff;
+    --text-color: #e0e0e0;
+    --bg-dark: #0f0f1e;
+    --bg-light: #16213e;
+    --border-color: #ff006e;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ----- GLOBAL RESET & BASE ----- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-dark);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* ----- TYPOGRAPHY ----- */
+h1, h2, h3 {
+    color: #ffffff;
+    margin: 20px 0 10px 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 2rem;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    margin: 10px 0;
+    line-height: 1.8;
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+/* ----- HEADER & NAVIGATION ----- */
+header {
+    background-color: var(--primary-color);
+    border-bottom: 3px solid var(--accent-color);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    color: var(--accent-color);
+    text-align: center;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 8px 15px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+/* ----- MAIN CONTENT ----- */
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    min-height: calc(100vh - 200px);
+}
+
+section {
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+article {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    margin: 15px 0;
+    border-left: 3px solid var(--secondary-color);
+    border-radius: 2px;
+}
+
+aside {
+    background-color: rgba(255, 0, 110, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px dashed var(--accent-color);
+    border-radius: 4px;
+}
+
+/* ----- SPECIFIC SECTIONS ----- */
+.hero {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.hero img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.festival-info article {
+    margin: 15px 0;
+}
+
+.program-day {
+    margin-bottom: 40px;
+}
+
+.program-day ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.program-day li {
+    background-color: rgba(0, 217, 255, 0.05);
+    padding: 15px;
+    margin: 10px 0;
+    border-left: 4px solid var(--secondary-color);
+    border-radius: 2px;
+}
+
+.program-day time {
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.performers-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.performer-card {
+    width: 280px;
+    padding: 15px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+    flex: 0 1 auto;
+}
+
+.performer-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--secondary-color);
+}
+
+.performer-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.performer-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: var(--accent-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    font-family: var(--font-family);
+    transition: background-color 0.3s ease;
+}
+
+.performer-btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--bg-dark);
+}
+
+/* ----- LISTS ----- */
+ul, ol {
+    margin-left: 20px;
+}
+
+li {
+    margin: 8px 0;
+}
+
+address {
+    font-style: normal;
+    margin: 10px 0;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
+/* ----- TIME ELEMENTS ----- */
+time {
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+/* ----- FOOTER ----- */
+footer {
+    background-color: var(--primary-color);
+    border-top: 3px solid var(--accent-color);
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+    color: var(--text-color);
+}
+
+footer a {
+    color: var(--secondary-color);
+}
+
+footer a:hover {
+    color: var(--accent-color);
+}
+
+/* ----- RESPONSIVE DESIGN ----- */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+        padding: 5px 10px;
+    }
+
+    main {
+        margin: 20px auto;
+        padding: 0 10px;
+    }
+
+    section {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .performer-card {
+        width: 45%;
+        margin: 2.5%;
+    }
+
+    .hero img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    nav ul {
+        gap: 5px;
+        flex-direction: column;
+    }
+
+    nav a {
+        display: block;
+        padding: 10px;
+    }
+
+    .performer-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    article {
+        padding: 10px;
+    }
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Performer Detail Schema",
+  "description": "Schema for GET /api/performers/{id} endpoint - single performer details",
+  "type": "object",
+  "required": ["id", "name", "genre"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^p[0-9]+$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "genre": {
+      "type": "string",
+      "minLength": 1
+    },
+    "bio": {
+      "type": "string",
+      "minLength": 1
+    },
+    "country": {
+      "type": "string",
+      "minLength": 1
+    },
+    "image": {
+      "type": "string",
+      "format": "uri"
+    }
+  }
+}

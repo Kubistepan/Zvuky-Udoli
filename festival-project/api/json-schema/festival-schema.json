@@ -1,0 +1,82 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Festival Schema",
+  "description": "Schema for GET /api/festival endpoint",
+  "type": "object",
+  "required": ["id", "name", "year", "location", "startDate", "endDate"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique festival identifier"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Festival name"
+    },
+    "year": {
+      "type": "integer",
+      "minimum": 2000,
+      "maximum": 2099,
+      "description": "Year of the festival"
+    },
+    "edition": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 10,
+      "description": "Edition number"
+    },
+    "location": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Festival location"
+    },
+    "startDate": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+      "description": "Start date in YYYY-MM-DD format"
+    },
+    "endDate": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+      "description": "End date in YYYY-MM-DD format"
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "website": {
+      "type": "string",
+      "format": "uri"
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "phoneNumber": {
+      "type": "string",
+      "pattern": "^\\+420 \\d{3} \\d{3} \\d{3}$"
+    },
+    "totalPerformers": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "totalEvents": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "totalVenues": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "ticketing": {
+      "type": "object",
+      "properties": {
+        "singleDayPrice": { "type": "number", "minimum": 0 },
+        "twoDayPrice": { "type": "number", "minimum": 0 },
+        "fullFestivalPrice": { "type": "number", "minimum": 0 },
+        "currency": { "type": "string" }
+      }
+    }
+  }
+}
