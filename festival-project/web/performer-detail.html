@@ -123,96 +123,74 @@
     </footer>
 
     <script>
-        // Performer data
+        // Performer data embedded directly (same as in performers.html)
         const performersData = {
-            'kobalt-collective': {
-                name: 'Kobalt Collective',
-                genre: 'Techno',
-                country: 'Německo',
-                city: 'Berlín',
-                image: 'https://picsum.photos/300/300?random=5',
-                description: 'Berlínská techno formace známá minimalistickými a hypnotickými sety. Čerpají inspiraci z industriálního zvuku.',
-                bio: 'Kobalt Collective je jednou z nejvýznamnějších techno skupin ze Berlína. Od roku 2010 vydali tři studiová alba a vystupovali na nejprestižnějších festivalech v Evropě. Jejich zvuk je charakterizován chladným průmyslovým timbrem a hipnotickými rytmickými strukturami.',
-                website: 'https://www.example.com',
-                socialMedia: '@kobaltcollective'
-            },
-            'luna-waves': {
-                name: 'Luna Waves',
-                genre: 'Ambient Electronic',
-                country: 'Belgie',
-                city: 'Brusel',
-                image: 'https://picsum.photos/300/300?random=6',
-                description: 'Belgická producentka a DJ se zaměřením na ambient a experimentální elektroniku. Tvorba s fokusem na textury zvuku.',
-                bio: 'Luna Waves je uznávaná belgická elektronická producentka zaměřená na tvorbu atmosférické a texturované hudby. Její práce byly vydány u prestižních labelu a její live sety jsou známé svou hypnotickou kvalitou a emotivním dopadem.',
-                website: 'https://www.example.com',
-                socialMedia: '@lunawaves'
-            },
-            'sonic-drift': {
-                name: 'Sonic Drift',
-                genre: 'House',
-                country: 'Nizozemí',
-                city: 'Amsterdam',
-                image: 'https://picsum.photos/300/300?random=7',
-                description: 'Holandský DJ a producent slavný svými energetickými house sety. 20 let zkušeností v klubech po celé Evropě.',
-                bio: 'Sonic Drift je veteran holandské house scény s více než dvacetiletou kariérou. Zápis se všemi největšími kluby v Evropě a vytvořil nespočet remixů. Jeho sety jsou oslavou klasické house hudby s moderními prvky.',
-                website: 'https://www.example.com',
-                socialMedia: '@sonicdrift'
-            },
-            'metamorphosis': {
-                name: 'Metamorphosis',
-                genre: 'Progressive Electronic',
-                country: 'Česká Republika',
-                city: 'Praha',
-                image: 'https://picsum.photos/300/300?random=8',
-                description: 'Týmová performance kombinující produkci elektronické hudby s live vizuály a interaktivními prvky.',
-                bio: 'Metamorphosis je kolaborativní projekt čtyř českých umělců, kteří spojují produkci elektronické hudby s živými vizuálními projekcemi a interaktivními prvky. Jejich live sety jsou komplexním zážitkem pro všechny smysly.',
-                website: 'https://www.example.com',
-                socialMedia: '@metamorphosis_cz'
-            },
-            'apex-rhythms': {
-                name: 'Apex Rhythms',
-                genre: 'Techno',
-                country: 'Francie',
-                city: 'Paříž',
-                image: 'https://picsum.photos/300/300?random=9',
-                description: 'Francouzský techno umělec s fokusem na hardcore a experimentální zvuky. Vytvořil 8 alb za poslední dekádu.',
-                bio: 'Apex Rhythms je francouzský techno producent a DJ známý svou experimentální a avant-garde přístupem. Vydal 8 studiových alb a pravidelně koncertuje na mezinárodních festivalech. Jeho hudba posouvá hranice elektronické hudby.',
-                website: 'https://www.example.com',
-                socialMedia: '@apexrhythms'
-            },
-            'the-velvet-echoes': {
-                name: 'The Velvet Echoes',
-                genre: 'Indie Rock',
-                country: 'Česká Republika',
-                city: 'Praha',
-                image: 'https://picsum.photos/300/300?random=10',
-                description: 'Čtyřčlenná indie rock kapela z Prahy. Jejich melancholické skladby s introspektivními texty získaly fanoušky po celé Evropě.',
-                bio: 'The Velvet Echoes jsou čtyřčlenná indie rock kapela z Prahy, která vstoupila na scénu v roce 2015. Jejich hudba kombinuje velvetový zvuk s hlubokými introspektivními texty. Vydali tři alba a jejich skladby byly streámovány miliony krát.',
-                website: 'https://www.example.com',
-                socialMedia: '@velvetechoes'
-            },
-            'crimson-whisper': {
-                name: 'Crimson Whisper',
-                genre: 'Post-Punk Revival',
-                country: 'Velká Británie',
-                city: 'Londýn',
-                image: 'https://picsum.photos/300/300?random=11',
-                description: 'Britská post-punk kapela s energetickými live show. Jejich temnější zvuk čerpá z 80. let.',
-                bio: 'Crimson Whisper je britská post-punk revivalová kapela z Londýna. Jejich hudba čerpá inspiraci z osmdesátých let a temných atmosfér. Známí jsou svými intenzivními a emocionálními live výkony.',
-                website: 'https://www.example.com',
-                socialMedia: '@crimsonwhisper'
-            },
-            'spark-quintet': {
-                name: 'Spark Quintet',
-                genre: 'Modern Jazz',
-                country: 'Česká Republika',
-                city: 'Praha',
-                image: 'https://picsum.photos/300/300?random=12',
-                description: 'Pražský jazzový kvintet zaměřený na improvizaci a experimentaci. Jejich fusion mixuje jazz s prvky elektroniky.',
-                bio: 'Spark Quintet je pražský jazzový kvintet zaměřený na moderní jazz a fusion. Jejich hudba kombinuje tradici jazzové improvizace s prvky elektronické hudby a experimentálního zvuku. Pravidelně koncertují v evropských jazzových klubech.',
-                website: 'https://www.example.com',
-                socialMedia: '@sparkquintet'
-            }
+            "data": [
+    {"id": "p1", "name": "Kobalt Collective", "genre": "Techno", "country": "Německo", "city": "Berlín", "image": "https://picsum.photos/300/300?random=5", "description": "Berlínská techno formace známá minimalistickými a hypnotickými sety. Čerpají inspiraci z industriálního zvuku.", "bio": "Kobalt Collective je jednou z nejvýznamnějších techno skupin ze Berlína. Od roku 2010 vydali tři studiová alba a vystupovali na nejprestižnějších festivalech v Evropě. Jejich zvuk je charakterizován chladným průmyslovým timbrem a hipnotickými rytmickými strukturami.", "website": "https://www.example.com", "socialMedia": "@kobaltcollective"},
+    {"id": "p2", "name": "Luna Waves", "genre": "Ambient Electronic", "country": "Belgie", "city": "Brusel", "image": "https://picsum.photos/300/300?random=6", "description": "Belgická producentka a DJ se zaměřením na ambient a experimentální elektroniku. Tvorba s fokusem na textury zvuku.", "bio": "Luna Waves je uznávaná belgická elektronická producentka zaměřená na tvorbu atmosférické a texturované hudby. Její práce byly vydány u prestižních labelu a její live sety jsou známé svou hypnotickou kvalitou a emotivním dopadem.", "website": "https://www.example.com", "socialMedia": "@lunawaves"},
+    {"id": "p3", "name": "Sonic Drift", "genre": "House", "country": "Nizozemí", "city": "Amsterdam", "image": "https://picsum.photos/300/300?random=7", "description": "Holandský DJ a producent slavný svými energetickými house sety. 20 let zkušeností v klubech po celé Evropě.", "bio": "Sonic Drift je veteran holandské house scény s více než dvacetiletou kariérou. Zápis se všemi největšími kluby v Evropě a vytvořil nespočet remixů. Jeho sety jsou oslavou klasické house hudby s moderními prvky.", "website": "https://www.example.com", "socialMedia": "@sonicdrift"},
+    {"id": "p4", "name": "Metamorphosis", "genre": "Progressive Electronic", "country": "Česká Republika", "city": "Praha", "image": "https://picsum.photos/300/300?random=8", "description": "Týmová performance kombinující produkci elektronické hudby s live vizuály a interaktivními prvky.", "bio": "Metamorphosis je kolaborativní projekt čtyř českých umělců, kteří spojují produkci elektronické hudby s živými vizuálními projekcemi a interaktivními prvky. Jejich live sety jsou komplexním zážitkem pro všechny smysly.", "website": "https://www.example.com", "socialMedia": "@metamorphosis_cz"},
+    {"id": "p5", "name": "Apex Rhythms", "genre": "Techno", "country": "Francie", "city": "Paříž", "image": "https://picsum.photos/300/300?random=9", "description": "Francouzský techno umělec s fokusem na hardcore a experimentální zvuky. Vytvořil 8 alb za poslední dekádu.", "bio": "Apex Rhythms je francouzský techno producent a DJ známý svou experimentální a avant-garde přístupem. Vydal 8 studiových alb a pravidelně koncertuje na mezinárodních festivalech. Jeho hudba posouvá hranice elektronické hudby.", "website": "https://www.example.com", "socialMedia": "@apexrhythms"},
+    {"id": "p6", "name": "The Velvet Echoes", "genre": "Indie Rock", "country": "Česká Republika", "city": "Praha", "image": "https://picsum.photos/300/300?random=10", "description": "Čtyřčlenná indie rock kapela z Prahy. Jejich melancholické skladby s introspektivními texty získaly fanoušky po celé Evropě.", "bio": "The Velvet Echoes jsou čtyřčlenná indie rock kapela z Prahy, která vstoupila na scénu v roce 2015. Jejich hudba kombinuje velvetový zvuk s hlubokými introspektivními texty. Vydali tři alba a jejich skladby byly streámovány miliony krát.", "website": "https://www.example.com", "socialMedia": "@velvetechoes"},
+    {"id": "p7", "name": "Crimson Whisper", "genre": "Post-Punk Revival", "country": "Velká Británie", "city": "Londýn", "image": "https://picsum.photos/300/300?random=11", "description": "Britská post-punk kapela s energetickými live show. Jejich temnější zvuk čerpá z 80. let.", "bio": "Crimson Whisper je britská post-punk revivalová kapela z Londýna. Jejich hudba čerpá inspiraci z osmdesátých let a temných atmosfér. Známí jsou svými intenzivními a emocionálními live výkony.", "website": "https://www.example.com", "socialMedia": "@crimsonwhisper"},
+    {"id": "p8", "name": "Spark Quintet", "genre": "Modern Jazz", "country": "Česká Republika", "city": "Praha", "image": "https://picsum.photos/300/300?random=12", "description": "Pražský jazzový kvintet zaměřený na improvizaci a experimentaci. Jejich fusion mixuje jazz s prvky elektroniky.", "bio": "Spark Quintet je pražský jazzový kvintet zaměřený na moderní jazz a fusion. Jejich hudba kombinuje tradici jazzové improvizace s prvky elektronické hudby a experimentálního zvuku. Pravidelně koncertují v evropských jazzových klubech.", "website": "https://www.example.com", "socialMedia": "@sparkquintet"},
+    {"id": "p9", "name": "Neon Cascade", "genre": "Synthwave", "country": "Polsko", "city": "Varšava", "image": "https://picsum.photos/300/300?random=13", "description": "Polský synth projekt s 80s inspirací a futuristickým zvukem.", "bio": "Neon Cascade přináší synth-pop s neonovými barvami a retro stylem.", "website": "https://www.example.com", "socialMedia": "@neoncascade"},
+    {"id": "p10", "name": "Astral Drift", "genre": "Ambient Techno", "country": "Rakousko", "city": "Vídeň", "image": "https://picsum.photos/300/300?random=14", "description": "Rakouský producent specialista na ambient techno.", "bio": "Astral Drift vytváří hudbu, která transportuje posluchače do vesmírných dimenzí.", "website": "https://www.example.com", "socialMedia": "@astraldrift"},
+    {"id": "p11", "name": "Velox", "genre": "Drum and Bass", "country": "Velká Británie", "city": "Bristol", "image": "https://picsum.photos/300/300?random=15", "description": "Britský drum and bass DJ s vysokým tempem.", "bio": "Velox je guru drum and bass scény.", "website": "https://www.example.com", "socialMedia": "@veloxdnb"},
+    {"id": "p12", "name": "Ethereal Voices", "genre": "Experimental Pop", "country": "Švédsko", "city": "Stockholm", "image": "https://picsum.photos/300/300?random=16", "description": "Švédská vokální skupina s experimentálním přístupem.", "bio": "Ethereal Voices jsou skupina zpěvaček, které hrají s hlasovými textami.", "website": "https://www.example.com", "socialMedia": "@etherealvoices"},
+    {"id": "p13", "name": "Echo Realm", "genre": "Industrial Noise", "country": "Německo", "city": "Kolín", "image": "https://picsum.photos/300/300?random=17", "description": "Německý průmyslový projekt s experimentálním zvukem.", "bio": "Echo Realm vytváří zvuk, který je hranicí mezi hudbou a šumem.", "website": "https://www.example.com", "socialMedia": "@echorealm"},
+    {"id": "p14", "name": "Golden Hour", "genre": "Indie Folk", "country": "Irsko", "city": "Dublin", "image": "https://picsum.photos/300/300?random=18", "description": "Irská folk kapela s moderním přístupem.", "bio": "Golden Hour kombinuje tradiční irskou hudbu s moderními prvky.", "website": "https://www.example.com", "socialMedia": "@goldenhourmusic"},
+    {"id": "p15", "name": "Pulse Collective", "genre": "Electronic Pop", "country": "Dánsko", "city": "Kodaň", "image": "https://picsum.photos/300/300?random=19", "description": "Dánská kapela s elektronickou pop hudbou.", "bio": "Pulse Collective vytváří elektronickou pop, která je zapamatovatelná.", "website": "https://www.example.com", "socialMedia": "@pulsecollective"},
+    {"id": "p16", "name": "Shadow Play", "genre": "Dark Wave", "country": "Itálie", "city": "Řím", "image": "https://picsum.photos/300/300?random=20", "description": "Italský dark wave projekt s gotickými atmosférami.", "bio": "Shadow Play přináší temné vlny synthů se syntetickými hlasy.", "website": "https://www.example.com", "socialMedia": "@shadowplay_dw"},
+    {"id": "p17", "name": "Rhythm Theory", "genre": "Afrobeat", "country": "Francie", "city": "Lyon", "image": "https://picsum.photos/300/300?random=21", "description": "Francouzská kapela inspirovaná afrobeatem.", "bio": "Rhythm Theory kombinuje africké tradice s evropským popem.", "website": "https://www.example.com", "socialMedia": "@rhythmtheory"},
+    {"id": "p18", "name": "Crystal Harmonies", "genre": "New Age", "country": "Slovensko", "city": "Bratislava", "image": "https://picsum.photos/300/300?random=22", "description": "Slovenský New Age projekt s meditativními zvuky.", "bio": "Crystal Harmonies vytváří zvuk pro relaxaci a spirituální transformaci.", "website": "https://www.example.com", "socialMedia": "@crystalharmonies"},
+    {"id": "p19", "name": "Vector Sound", "genre": "Glitch Electronic", "country": "Švýcarsko", "city": "Curych", "image": "https://picsum.photos/300/300?random=23", "description": "Švýcarský elektronický experimentátor.", "bio": "Vector Sound pracuje s digitálními artefakty a glitche.", "website": "https://www.example.com", "socialMedia": "@vectorsound"},
+    {"id": "p20", "name": "Lunar Eclipse", "genre": "Dream Pop", "country": "Velká Británie", "city": "Manchester", "image": "https://picsum.photos/300/300?random=24", "description": "Britská dream pop kapela se snivými melódiemi.", "bio": "Lunar Eclipse vytváří dream pop, která vás transportuje.", "website": "https://www.example.com", "socialMedia": "@lunareclipse"},
+    {"id": "p21", "name": "Iron Pulse", "genre": "Heavy Metal", "country": "Švédsko", "city": "Göteborg", "image": "https://picsum.photos/300/300?random=25", "description": "Švédská heavy metal kapela.", "bio": "Iron Pulse je jednou z novějších švédských metalových kapel.", "website": "https://www.example.com", "socialMedia": "@ironpulse"},
+    {"id": "p22", "name": "Whisper Box", "genre": "Chillwave", "country": "Německo", "city": "Hamburg", "image": "https://picsum.photos/300/300?random=26", "description": "Německý chillwave projekt s relaxující atmosférou.", "bio": "Whisper Box vytváří chillwave s fokusem na atmosféru.", "website": "https://www.example.com", "socialMedia": "@whisperbox"},
+    {"id": "p23", "name": "Synth Nexus", "genre": "Synthpop", "country": "Polsko", "city": "Kraków", "image": "https://picsum.photos/300/300?random=27", "description": "Polský synthpop projekt s synthy melodií.", "bio": "Synth Nexus je moderní interpretace synthpopu.", "website": "https://www.example.com", "socialMedia": "@synthnexus"},
+    {"id": "p24", "name": "Orbital Pulse", "genre": "Space Rock", "country": "Francie", "city": "Marseille", "image": "https://picsum.photos/300/300?random=28", "description": "Francouzský space rock projekt s kosmickými atmosférami.", "bio": "Orbital Pulse přináší space rock s progresivním přístupem.", "website": "https://www.example.com", "socialMedia": "@orbitalpulse"},
+    {"id": "p25", "name": "Citadel", "genre": "Darkcore", "country": "Nederlandí", "city": "Rotterdam", "image": "https://picsum.photos/300/300?random=29", "description": "Holandský darkcore projekt s agresivními syntzami.", "bio": "Citadel vytváří darkcore, který je tvrdý a futuristický.", "website": "https://www.example.com", "socialMedia": "@citadelmusic"},
+    {"id": "p26", "name": "Velvet Garden", "genre": "Slowcore", "country": "Česká Republika", "city": "Brno", "image": "https://picsum.photos/300/300?random=30", "description": "Česká slowcore kapela se zpomalením tempem.", "bio": "Velvet Garden tvoří slowcore s hlubokými texty.", "website": "https://www.example.com", "socialMedia": "@velvetgarden"},
+    {"id": "p27", "name": "Zenith Wave", "genre": "Vaporwave", "country": "Itálie", "city": "Milán", "image": "https://picsum.photos/300/300?random=31", "description": "Italský vaporwave projekt s retro vzorkováním.", "bio": "Zenith Wave vytváří vaporwave s fokusem na atmosféru.", "website": "https://www.example.com", "socialMedia": "@zenithwave"},
+    {"id": "p28", "name": "Midnight Collective", "genre": "Neo-Soul", "country": "Francie", "city": "Toulouse", "image": "https://picsum.photos/300/300?random=32", "description": "Francouzská neo-soul kapela se soulnatými vokály.", "bio": "Midnight Collective tvoří neo-soul s moderním přístupem.", "website": "https://www.example.com", "socialMedia": "@midnightcollective"},
+    {"id": "p29", "name": "Prism Echo", "genre": "Psychedelic Rock", "country": "Španělsko", "city": "Barcelona", "image": "https://picsum.photos/300/300?random=33", "description": "Španělská psychedelic rock kapela.", "bio": "Prism Echo tvoří psychedelic rock s moderním zvukem.", "website": "https://www.example.com", "socialMedia": "@prismecho"},
+    {"id": "p30", "name": "Electronic Shadows", "genre": "EBM", "country": "Německo", "city": "Berlín", "image": "https://picsum.photos/300/300?random=34", "description": "Německý EBM projekt s temnou elektronikou.", "bio": "Electronic Shadows tvoří EBM s metalovými prvky.", "website": "https://www.example.com", "socialMedia": "@electronicshadows"},
+    {"id": "p31", "name": "Solar Flare", "genre": "Funk", "country": "Francie", "city": "Nice", "image": "https://picsum.photos/300/300?random=35", "description": "Francouzská funk kapela se groovy basem.", "bio": "Solar Flare vytváří funk s energií a groovem.", "website": "https://www.example.com", "socialMedia": "@solarflare"},
+    {"id": "p32", "name": "Quantum Fields", "genre": "Experimental", "country": "Rakousko", "city": "Salzburg", "image": "https://picsum.photos/300/300?random=36", "description": "Rakouský experimentální projekt.", "bio": "Quantum Fields tvoří experimentální hudbu bez hranic.", "website": "https://www.example.com", "socialMedia": "@quantumfields"},
+    {"id": "p33", "name": "Velvet Echo", "genre": "Downtempo", "country": "Polsko", "city": "Wrocław", "image": "https://picsum.photos/300/300?random=37", "description": "Polský downtempo projekt.", "bio": "Velvet Echo vytváří downtempo pro večerní poslouchání.", "website": "https://www.example.com", "socialMedia": "@velvetecho"},
+    {"id": "p34", "name": "Chrome Hearts", "genre": "Coldwave", "country": "Itálie", "city": "Turín", "image": "https://picsum.photos/300/300?random=38", "description": "Italský coldwave projekt s chladnými synthy.", "bio": "Chrome Hearts tvoří coldwave s minimalismem.", "website": "https://www.example.com", "socialMedia": "@chromehearts"},
+    {"id": "p35", "name": "Sonic Bloom", "genre": "Tropical House", "country": "Španělsko", "city": "Madrid", "image": "https://picsum.photos/300/300?random=39", "description": "Španělský tropical house projekt s letní atmosférou.", "bio": "Sonic Bloom vytváří tropical house s eksotickými prvky.", "website": "https://www.example.com", "socialMedia": "@sonicbloom"},
+    {"id": "p36", "name": "Neon Noir", "genre": "Cyberpunk", "country": "Německo", "city": "Frankfurt", "image": "https://picsum.photos/300/300?random=40", "description": "Německý cyberpunk projekt s futuristickým zvukem.", "bio": "Neon Noir vytváří cyberpunk s dystopickou atmosférou.", "website": "https://www.example.com", "socialMedia": "@neonnoir"},
+    {"id": "p37", "name": "Harmonic Waves", "genre": "Reggae", "country": "Francie", "city": "Réunion", "image": "https://picsum.photos/300/300?random=41", "description": "Francouzská reggae kapela s pozitivní energií.", "bio": "Harmonic Waves vytváří reggae s pozitivní energií.", "website": "https://www.example.com", "socialMedia": "@harmonicwaves"},
+    {"id": "p38", "name": "Electric Pulse", "genre": "Electro", "country": "Švýcarsko", "city": "Ženeva", "image": "https://picsum.photos/300/300?random=42", "description": "Švýcarský electro projekt s elektrickými synthy.", "bio": "Electric Pulse tvoří electro s vintage zvukem.", "website": "https://www.example.com", "socialMedia": "@electricpulse"},
+    {"id": "p39", "name": "Arctic Drone", "genre": "Drone", "country": "Island", "city": "Reykjavík", "image": "https://picsum.photos/300/300?random=43", "description": "Islandský drone projekt s dlouhými tóny.", "bio": "Arctic Drone vytváří drone hudbu inspirovanou přírodou.", "website": "https://www.example.com", "socialMedia": "@arcticdrone"},
+    {"id": "p40", "name": "Chaos Theory", "genre": "Drum and Bass", "country": "Velká Británie", "city": "Londýn", "image": "https://picsum.photos/300/300?random=44", "description": "Britský drum and bass DJ se složitými rytmy.", "bio": "Chaos Theory je technik drum and bass.", "website": "https://www.example.com", "socialMedia": "@chaostheory_dnb"},
+    {"id": "p41", "name": "Violet Haze", "genre": "Shoegaze", "country": "Francie", "city": "Bordeaux", "image": "https://picsum.photos/300/300?random=45", "description": "Francouzský shoegaze projekt s distortovanými kytarami.", "bio": "Violet Haze tvoří shoegaze s moderní interpretací.", "website": "https://www.example.com", "socialMedia": "@violethaze"},
+    {"id": "p42", "name": "Urban Jungle", "genre": "Grime", "country": "Velká Británie", "city": "Birmingham", "image": "https://picsum.photos/300/300?random=46", "description": "Britský grime MC s agresivním stylem.", "bio": "Urban Jungle je uznávaný grime MC se silnými texty.", "website": "https://www.example.com", "socialMedia": "@urbanjungle_grime"},
+    {"id": "p43", "name": "Crystal Clear", "genre": "Liquid Funk", "country": "Německo", "city": "Düsseldorf", "image": "https://picsum.photos/300/300?random=47", "description": "Německý liquid funk projekt s jazzovými prvky.", "bio": "Crystal Clear vytváří liquid funk s elegancí.", "website": "https://www.example.com", "socialMedia": "@crystalclear"},
+    {"id": "p44", "name": "Nocturn Frequency", "genre": "Darkstep", "country": "Itálie", "city": "Benátky", "image": "https://picsum.photos/300/300?random=48", "description": "Italský darkstep projekt s temným zvukem.", "bio": "Nocturn Frequency vytváří darkstep s hypnotickými prvky.", "website": "https://www.example.com", "socialMedia": "@nocturnfrequency"},
+    {"id": "p45", "name": "Midnight Sun", "genre": "Trance", "country": "Finsko", "city": "Helsinki", "image": "https://picsum.photos/300/300?random=49", "description": "Finský trance DJ s dlouhými build-upy.", "bio": "Midnight Sun je finský trance maestro.", "website": "https://www.example.com", "socialMedia": "@midnightsun_trance"},
+    {"id": "p46", "name": "Static River", "genre": "Noise Pop", "country": "Švédsko", "city": "Malmö", "image": "https://picsum.photos/300/300?random=50", "description": "Švédský noise pop projekt s hlučnými kytarami.", "bio": "Static River kombinuje hlučné kytary s pop.", "website": "https://www.example.com", "socialMedia": "@staticriver"},
+    {"id": "p47", "name": "Golden Ratio", "genre": "Math Rock", "country": "Česká Republika", "city": "Ostrava", "image": "https://picsum.photos/300/300?random=51", "description": "Česká math rock kapela se složitými ritmy.", "bio": "Golden Ratio tvoří math rock s presností.", "website": "https://www.example.com", "socialMedia": "@goldenratio_mr"},
+    {"id": "p48", "name": "Cosmic Decay", "genre": "Dark Ambient", "country": "Polsko", "city": "Gdańsk", "image": "https://picsum.photos/300/300?random=52", "description": "Polský dark ambient projekt s депресивныеístem", "bio": "Cosmic Decay vytváří dark ambient pro introspekci.", "website": "https://www.example.com", "socialMedia": "@cosmicdecay"},
+    {"id": "p49", "name": "Neural Impulse", "genre": "IDM", "country": "Francie", "city": "Paris", "image": "https://picsum.photos/300/300?random=53", "description": "Francouzský IDM projekt s komplexními rytmy.", "bio": "Neural Impulse tvoří IDM s intelektem.", "website": "https://www.example.com", "socialMedia": "@neuralimpulse"},
+    {"id": "p50", "name": "Ethereal Void", "genre": "Dungeon Synth", "country": "Norsko", "city": "Oslo", "image": "https://picsum.photos/300/300?random=54", "description": "Norský dungeon synth projekt se fantasy prvky.", "bio": "Ethereal Void vytváří dungeon synth.", "website": "https://www.example.com", "socialMedia": "@etherealvoid"},
+    {"id": "p51", "name": "Acid Bath", "genre": "Acid Tech", "country": "Německo", "city": "München", "image": "https://picsum.photos/300/300?random=55", "description": "Německý acid tech DJ s kyselými zvuky.", "bio": "Acid Bath je expert na acid tech.", "website": "https://www.example.com", "socialMedia": "@acidbath"},
+    {"id": "p52", "name": "Shimmer Effect", "genre": "Chillstep", "country": "Rakousko", "city": "Linz", "image": "https://picsum.photos/300/300?random=56", "description": "Rakouský chillstep projekt s pomalým beatem.", "bio": "Shimmer Effect tvoří chillstep pro relaxaci.", "website": "https://www.example.com", "socialMedia": "@shimmereffect"},
+    {"id": "p53", "name": "Reverse Echo", "genre": "Post-Rock", "country": "Španělsko", "city": "Bilbao", "image": "https://picsum.photos/300/300?random=57", "description": "Španělská post-rock kapela s epicými budou.", "bio": "Reverse Echo tvoří post-rock s epicým zvukem.", "website": "https://www.example.com", "socialMedia": "@reverseecho"},
+    {"id": "p54", "name": "Synthetic Dreams", "genre": "Synth-pop", "country": "Švédsko", "city": "Uppsala", "image": "https://picsum.photos/300/300?random=58", "description": "Švédský synth-pop projekt s retro vizí.", "bio": "Synthetic Dreams vytváří synth-pop s retro.", "website": "https://www.example.com", "socialMedia": "@syntheticdreams"},
+    {"id": "p55", "name": "Phantom Beats", "genre": "Dubstep", "country": "Velká Británie", "city": "Leeds", "image": "https://picsum.photos/300/300?random=59", "description": "Britský dubstep DJ s nízkými frekvencemi.", "bio": "Phantom Beats je mistr dubstepu.", "website": "https://www.example.com", "socialMedia": "@phantombeats"},
+    {"id": "p56", "name": "Emerald Decay", "genre": "Vaporwave", "country": "Itálie", "city": "Palermo", "image": "https://picsum.photos/300/300?random=60", "description": "Italský vaporwave projekt s artistickou vizí.", "bio": "Emerald Decay vytváří vaporwave s uměním.", "website": "https://www.example.com", "socialMedia": "@emeralddecay"},
+    {"id": "p57", "name": "Prism Light", "genre": "Psychill", "country": "Francie", "city": "Strasbourg", "image": "https://picsum.photos/300/300?random=61", "description": "Francouzský psychill projekt s psychedelickou hudbou.", "bio": "Prism Light vytváří psychill s nádherou.", "website": "https://www.example.com", "socialMedia": "@prismlight"},
+    {"id": "p58", "name": "Static Waves", "genre": "Glitch Hop", "country": "Německo", "city": "Stuttgart", "image": "https://picsum.photos/300/300?random=62", "description": "Německý glitch hop projekt s glitchy rytmy.", "bio": "Static Waves vytváří glitch hop s efekty.", "website": "https://www.example.com", "socialMedia": "@staticwaves"},
+    {"id": "p59", "name": "Velocity Cross", "genre": "Speedcore", "country": "Polsko", "city": "Poznań", "image": "https://picsum.photos/300/300?random=63", "description": "Polský speedcore DJ s extrémně vysokým tempem.", "bio": "Velocity Cross je master speedcoru.", "website": "https://www.example.com", "socialMedia": "@velocitycross"},
+    {"id": "p60", "name": "Void Walker", "genre": "Ambient Pop", "country": "Česká Republika", "city": "Liberec", "image": "https://picsum.photos/300/300?random=64", "description": "Česká ambient pop kapela s atmosferickými písněmi.", "bio": "Void Walker tvoří ambient pop s poesií.", "website": "https://www.example.com", "socialMedia": "@voidwalker"},
+    {"id": "p61", "name": "Crystal Nexus", "genre": "Psytrance", "country": "Francie", "city": "Marseille", "image": "https://picsum.photos/300/300?random=65", "description": "Francouzský psytrance projekt s psychedelickými prvky.", "bio": "Crystal Nexus tvoří psytrance s uměním.", "website": "https://www.example.com", "socialMedia": "@crystalnexus"},
+    {"id": "p62", "name": "Iron Density", "genre": "Breakcore", "country": "Velká Británie", "city": "Glasgow", "image": "https://picsum.photos/300/300?random=66", "description": "Britský breakcore DJ s chaotickými rytmy.", "bio": "Iron Density je mistr breakcoru.", "website": "https://www.example.com", "socialMedia": "@irondensity"},
+    {"id": "p63", "name": "Luminous Haze", "genre": "Synthwave", "country": "Španělsko", "city": "Sevilla", "image": "https://picsum.photos/300/300?random=67", "description": "Španělský synthwave projekt s neonovými barvami.", "bio": "Luminous Haze vytváří synthwave s retro.", "website": "https://www.example.com", "socialMedia": "@luminoushaze"},
+    {"id": "p64", "name": "Eternal Silence", "genre": "Minimal Classical", "country": "Rakousko", "city": "Insbruck", "image": "https://picsum.photos/300/300?random=68", "description": "Rakouský minimal classical projekt s klasickou hudbou.", "bio": "Eternal Silence tvoří minimal classical s moderní interpretací.", "website": "https://www.example.com", "socialMedia": "@eternalsilence"}
+            ]
         };
 
         // Get performer from URL parameter
@@ -224,7 +202,23 @@
         // Render performer detail
         function renderPerformerDetail() {
             const performerId = getPerformerFromUrl();
-            const performer = performersData[performerId];
+            const data = performersData;
+
+            // Find the performer by name (converted to slug format)
+            const performer = data.data.find(p => {
+                const slug = p.name.toLowerCase()
+                    .replace(/\s+/g, '-')
+                    .replace(/[àáâãäå]/g, 'a')
+                    .replace(/[èéêë]/g, 'e')
+                    .replace(/[ìíîï]/g, 'i')
+                    .replace(/[òóôõö]/g, 'o')
+                    .replace(/[ùúûü]/g, 'u')
+                    .replace(/[ýÿ]/g, 'y')
+                    .replace(/[č]/g, 'c')
+                    .replace(/[š]/g, 's')
+                    .replace(/[ž]/g, 'z');
+                return slug === performerId;
+            });
 
             if (!performer) {
                 document.getElementById('performerDetail').innerHTML = `
